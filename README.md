@@ -11,10 +11,11 @@
 2. [Dlaczego warto mnie zatrudnić](#dlaczego-warto-mnie-zatrudnić)  
 3. [Funkcjonalności](#funkcjonalności)  
 4. [Technologie](#technologie)  
-5. [Instalacja](#instalacja)  
-6. [Użytkowanie](#użytkowanie)  
-7. [Kontrybucja](#kontrybucja)  
-8. [Licencja](#licencja)  
+5. [Biblioteki i narzędzia](#biblioteki-i-narzędzia)  
+6. [Instalacja](#instalacja)  
+7. [Użytkowanie](#użytkowanie)  
+8. [Kontrybucja](#kontrybucja)  
+9. [Licencja](#licencja)  
 
 ---
 
@@ -59,6 +60,18 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 - Tailwind CSS  
 - JavaScript (ES6+)  
 - HTML5  
+
+---
+
+## 🔧 Biblioteki i narzędzia
+- **react-icons** – ikony wektorowe w React  
+- **framer-motion** – zaawansowane animacje  
+- **react-confetti** – efekt konfetti po ukończeniu wyzwania  
+- **recharts** – proste wykresy liniowe i słupkowe  
+- **@nivo/calendar**, **@nivo/bar**, **@nivo/line** – wizualizacje kalendarzowe i wykresy  
+- **usehooks-ts** – gotowe hooki TypeScript  
+- **use-local-storage** – łatwe przechowywanie stanu w localStorage  
+- **theme-toggles** – gotowe przełączniki motywów  
 
 ---
 
