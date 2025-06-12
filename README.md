@@ -19,8 +19,6 @@
 6. [Funkcjonalności](#functionalities)
 7. [Użytkowanie](#use)  
 8. [Instalacja](#instalation)  
-9. [Kontrybucja](#kontrybucja)  
-10. [Licencja](#license)  
 
 ---
 ## <a name="description"></a>🔍 Opis projektu
@@ -103,9 +101,3 @@ npm install
 # 4. Uruchom w trybie deweloperskim
 npm run dev
 
----
-
-## <a name="license"></a>📄 Licencja
-© 2025 Dawid Migacz. All Rights Reserved.  
-
----
