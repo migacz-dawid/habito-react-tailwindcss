@@ -1,0 +1,221 @@
+{
+	"active": "Aktywne",
+	"archive": "Archiwum",
+	"end_day": "Zakończ dzień",
+	"your_goals": "Twoje cele",
+	"add_new_goal": "Dodaj nowy cel",
+	"edit_goal": "Edytuj cel",
+	"search_goal": "Szukaj celu",
+	"search_goal_ellipsis": "Szukaj celu...",
+	"category": "Kategoria",
+	"no_matching_goals": "Brak pasujących celów.",
+
+	"all": "Wszystkie",
+	"completed": "Zrealizowane",
+	"not_completed": "Niezrealizowane",
+
+	"mark_done": "Oznacz jako wykonany",
+	"done": "Ukończony",
+	"edit": "Edytuj",
+	"stats": "Statystyki",
+	"archive_goal": "Archiwizuj",
+	"restore_goal": "Przywróć",
+
+	"home": "Home",
+	"add_goal": "Dodaj cel",
+	"statistics": "Statystyki",
+	"about_link": "O aplikacji",
+
+	"tooltip": {
+		"change_language": "Zmień język",
+		"switch_to_dark": "Przełącz na tryb ciemny",
+		"switch_to_light": "Przełącz na tryb jasny"
+	},
+
+	"title": "Tytuł",
+	"goal_name": "Nazwa celu",
+	"description": "Opis",
+	"optional_description": "Opcjonalny opis celu",
+	"category_field": "Kategoria",
+	"health": "Zdrowie",
+	"select_days": "Wybierz dni realizacji celu",
+	"every_day": "Codziennie",
+	"mon": "Po",
+	"tue": "Wt",
+	"wed": "Śr",
+	"thu": "Cz",
+	"fri": "Pi",
+	"sat": "So",
+	"sun": "Ni",
+	"save_goal": "Zapisz cel",
+	"cancel_changes": "Anuluj",
+	"see_more": "Zobacz więcej >>",
+	"delete_btn": "Usuń cel",
+	"created_goal": "Cel utworzony",
+
+	"errors": {
+		"title_required": "Tytuł jest wymagany",
+		"days_required": "Wybierz przynajmniej jeden dzień tygodnia"
+	},
+
+	"your_statistics": "Twoje Statystyki",
+	"select_goal": "Wybierz cel",
+	"select": "-- Wybierz --",
+	"select_chart": "Typ wykresu:",
+	"no_chart_data": "Wybierz cel, aby zobaczyć wykres",
+
+	"from": "Od (start)",
+	"select_month": "Wybierz miesiąc...",
+	"to": "Do (end)",
+	"reset_filters": "Resetuj filtry",
+
+	"no_data_in_range": "Brak danych w wybranym okresie",
+
+	"back_to_goals": "Powrót do celów",
+	"export_csv": "Eksportuj dane do CSV",
+
+	"goal_stats": "Statystyki celu",
+	"completed_days": "Dni zrealizowane:",
+	"longest_streak": "Najdłuższy streak",
+	"day": "dzień",
+	"days": "dni",
+	"avg_streak": "Średni streak",
+	"success_rate": "Skuteczność",
+	"completionRate": "(% ukończonych dni vs zaplanowanych).",
+
+	"settings": "Ustawienia",
+	"backup_data": "Backup danych",
+	"export_data": "Eksportuj dane",
+	"import_data": "Importuj dane",
+	"backup_note": "Dane zostaną zapisane lub nadpisane w pamięci przeglądarki.",
+	"demo_note": "Wczytaj przykładowe dane.",
+	"demo_button": "Załaduj dane demo",
+	"dark_mode": "Dark Mode",
+	"dark_mode_note": "Przełącz motyw aplikacji między trybem jasnym a ciemnym.",
+	"change_language": "Zmień język",
+	"change_language_note": "Zmień język interfejsu między polskim a angielskim.",
+	"pwa_title": "Zainstaluj aplikację",
+	"pwa_content": "Dodaj aplikację do ekranu głównego, aby korzystać z niej jak z natywnej. Szybszy dostęp, pełny ekran i wygoda zawsze pod ręką. <br /> <strong>* Jeśli nie możesz pobrać aplikacji, spróbuj odświeżyć stronę i wrócić tutaj ponownie.<strong/>",
+	"pwa_button": "Zainstaluj teraz",
+	"pwa_install_done": "Gotowe! Jeśli pojawił się komunikat, możesz dodać aplikację do ekranu głównego. Jeśli nie masz zainstalowanej aplikacji, odśwież stronę i spróbuj ponownie.",
+
+	"confirm": "Czy na pewno?",
+	"info": "Informacja",
+	"confirm_import": "Czy na pewno chcesz zaimportować dane? Obecne dane zostaną nadpisane.",
+	"info_import_done": "Dane zostały zaimportowane pomyślnie.",
+	"confirm_reset": "Czy na pewno chcesz zresetować dane? Ta operacja jest nieodwracalna.",
+	"info_reset_done": "Dane zostały zresetowane.",
+	"confirm_load_demo": "Czy chcesz załadować dane demo? Nadpisze to Twoje obecne dane.",
+	"info_demo_loaded": "Dane demo zostały załadowane.",
+	"info_export_done": "Dane zostały wyeksportowane.",
+
+	"reset_data": "Reset danych",
+	"reset_info": "Ta opcja usunie wszystkie zapisane cele z aplikacji.",
+	"reset_button": "Resetuj wszystkie cele",
+	"reset_confirm": "Czy na pewno chcesz usunąć wszystkie cele? Tej operacji nie można cofnąć!",
+
+	"categories": {
+		"all": "Wszystkie",
+		"health": "Zdrowie",
+		"personal": "Rozwój osobisty",
+		"work": "Praca",
+		"finance": "Finanse",
+		"other": "Inne"
+	},
+
+	"weekdays": {
+		"monday": "Poniedziałek",
+		"tuesday": "Wtorek",
+		"wednesday": "Środa",
+		"thursday": "Czwartek",
+		"friday": "Piątek",
+		"saturday": "Sobota",
+		"sunday": "Niedziela",
+		"daily": "Codziennie"
+	},
+
+	"months": {
+		"january": "Styczeń",
+		"february": "Luty",
+		"march": "Marzec",
+		"april": "Kwiecień",
+		"may": "Maj",
+		"june": "Czerwiec",
+		"july": "Lipiec",
+		"august": "Sierpień",
+		"september": "Wrzesień",
+		"october": "Październik",
+		"november": "Listopad",
+		"december": "Grudzień"
+	},
+
+	"charts": {
+		"heatmap": "Heatmapa",
+		"bar": "Wykres słupkowy ",
+		"line": "Wykres liniowy",
+		"date": "Data"
+	},
+
+	"help": {
+		"help": "Pomoc",
+		"title": "Pomoc i instrukcja obsługi",
+		"intro": "Tutaj znajdziesz informacje, jak korzystać z aplikacji do zarządzania celami.",
+		"sections": {
+			"add_goal": {
+				"title": "Dodawanie nowego celu",
+				"content": "Kliknij 'Dodaj nowy cel', wypełnij tytuł, opis, kategorię i wybierz dni tygodnia, w których chcesz go realizować. Możesz wybrać 'Codziennie' lub konkretne dni."
+			},
+			"complete_goal": {
+				"title": "Wykonanie celu",
+				"content": "W zakładce głównej kliknij przycisk '✔️ Oznacz jako wykonany', aby zaznaczyć cel jako ukończony w danym dniu. Spowoduje to aktualizację streaka i statystyk."
+			},
+			"end_day": {
+				"title": "Zakończenie dnia",
+				"content": "Każdego dnia kliknij przycisk 'Zakończ dzień'. Aplikacja przesunie datę i zaktualizuje statystyki dla każdego celu."
+			},
+			"stats": {
+				"title": "Statystyki",
+				"content": "W zakładce 'Statystyki' możesz zobaczyć swoje postępy w formie wykresów: Heatmapa, Bar Chart, Line Chart. Wybierz cel oraz zakres dat, aby przeglądać szczegóły."
+			},
+			"archive": {
+				"title": "Archiwizacja",
+				"content": "Możesz przenosić cele do archiwum i później je przywracać. Przycisk archiwizacji znajduje się przy każdym celu."
+			},
+			"settings": {
+				"title": "Ustawienia",
+				"content": "W ustawieniach znajdziesz możliwość eksportu i importu danych, resetowania celów, zmiany języka oraz trybu ciemnego."
+			}
+		},
+		"about_title": "O aplikacji",
+		"about_content": "Dowiedz się więcej o naszej aplikacji klikając poniższy link.",
+		"about_button": "Więcej...",
+		"repo_title": "Kod źródłowy na GitHub",
+		"repo_text": "Zapoznaj się z naszym repozytorium i dołącz do rozwoju projektu.",
+		"repo_link": "Przejdź do repozytorium"
+	},
+
+	"about": {
+		"title": "Twoje cele. Twoje tempo. Twoje zasady.",
+		"paragraph_1": "Ta aplikacja powstała z myślą o wszystkich, którzy chcą coś zmienić – ale bez presji, spiny i miliona nieczytelnych opcji. Niezależnie od tego, czy chcesz codziennie pić więcej wody, w końcu zacząć ćwiczyć, czy po prostu pamiętać, że poniedziałek to nie koniec świata – jesteś w dobrym miejscu.",
+		"paragraph_2": "Wybierz dni, w które chcesz działać",
+		"paragraph_3": "Przypisz kategorię, żeby wszystko było uporządkowane",
+		"paragraph_4": "Dodaj opis, jeśli chcesz sobie dodać motywacji",
+		"paragraph_5": "A potem już tylko wracaj i odhaczaj postępy",
+		"paragraph_6": "Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszystko, czego potrzeba, by w końcu zacząć i nie przestać.",
+		"paragraph_7": "Nie musisz być perfekcyjny, żeby być konsekwentny.",
+		"paragraph_8": "To nie kolejna apka do zarządzania życiem. To Twoja osobista przestrzeń do małych (i dużych) zwycięstw."
+	},
+
+	"load_demo_data": "Załaduj dane demo",
+	"demo_prompt": "Nie masz jeszcze celów? Załaduj dane przykładowe",
+	"not_found": "Ups! Taka strona nie istnieje.",
+	"not_found_btn": "←  Wróć do strony głównej",
+	"confirm_delete": "Usuń cel",
+	"confirm_delete_message": "Czy na pewno chcesz usunąć ten cel? Tej operacji nie można cofnąć.",
+	"yes": "Tak",
+	"no": "Nie",
+	"today": "Dzisiaj",
+	"goal_congrats": {
+		"completed_message": "🎉 Gratulacje! \"{{title}}\" ma już {{streak}} dni streaka! 🏆"
+	}
+}

@@ -1,0 +1,221 @@
+{
+	"active": "Active",
+	"archive": "Archive",
+	"end_day": "End Day",
+	"your_goals": "Your goals",
+	"add_new_goal": "Add new goal",
+	"edit_goal": "Edit goal",
+	"search_goal": "Search goal",
+	"search_goal_ellipsis": "Search goal...",
+	"category": "Category",
+	"no_matching_goals": "No matching goals.",
+
+	"all": "All tasks",
+	"completed": "Completed",
+	"not_completed": "Not completed",
+
+	"mark_done": "Mark as done",
+	"done": "Done",
+	"edit": "Edit",
+	"stats": "Statistics",
+	"archive_goal": "Archive",
+	"restore_goal": "Restore",
+
+	"home": "Home",
+	"add_goal": "Add goal",
+	"statistics": "Statistics",
+	"about_link": "About",
+
+	"tooltip": {
+		"change_language": "Change language",
+		"switch_to_dark": "Switch to dark mode",
+		"switch_to_light": "Switch to light mode"
+	},
+
+	"title": "Title",
+	"goal_name": "Goal name",
+	"description": "Description",
+	"optional_description": "Optional description",
+	"category_field": "Category",
+	"health": "Health",
+	"select_days": "Select days of goal execution",
+	"every_day": "Every day",
+	"mon": "Mo",
+	"tue": "Tu",
+	"wed": "We",
+	"thu": "Th",
+	"fri": "Fr",
+	"sat": "Sa",
+	"sun": "Su",
+	"save_goal": "Save goal",
+	"cancel_changes": "Cancel",
+	"see_more": "See more >>",
+	"delete_btn": "Remove goal",
+	"created_goal": "Goal created",
+
+	"errors": {
+		"title_required": "Title is required",
+		"days_required": "Please select at least one day of the week"
+	},
+
+	"your_statistics": "Your Statistics",
+	"select_goal": "Select goal",
+	"select_chart": "Chart type:",
+	"select": "-- Select --",
+	"no_chart_data": "Select a goal to view chart",
+
+	"from": "From (start)",
+	"select_month": "Select a month...",
+	"to": "To (end)",
+	"reset_filters": "Reset filters",
+
+	"no_data_in_range": "No data available for the selected period",
+
+	"back_to_goals": "Back to goals",
+	"export_csv": "Export data to CSV",
+
+	"goal_stats": "Goal Statistics",
+	"completed_days": "Completed days:",
+	"longest_streak": "Longest streak",
+	"day": "day",
+	"days": "days",
+	"avg_streak": "Average streak",
+	"success_rate": "Success rate",
+	"completionRate": "(% of completed days vs planned).",
+
+	"settings": "Settings",
+	"backup_data": "Backup your data",
+	"export_data": "Export data",
+	"import_data": "Import data",
+	"backup_note": "Your goals will be saved to or loaded from your browser's local storage.",
+	"demo_note": "Load sample data.",
+	"demo_button": "Load demo data",
+	"dark_mode": "Dark Mode",
+	"dark_mode_note": "Toggle the application theme between light and dark mode.",
+	"change_language": "Switch Language",
+	"change_language_note": "Switch the interface language between Polish and English.",
+	"pwa_title": "Install the App",
+	"pwa_content": "Add the app to your home screen for a native-like experience. Faster access, fullscreen mode, and convenience always within reach. <br /><strong> * If you're unable to install the app, try refreshing the page and returning here. <strong/>",
+	"pwa_button": "Install now",
+	"pwa_install_done": "Done! If a prompt appeared, you can now add the app to your home screen. If the app is not installed, refresh the page and try again.",
+
+	"confirm": "Are you sure?",
+	"info": "Information",
+	"confirm_import": "Are you sure you want to import data? Existing data will be overwritten.",
+	"info_import_done": "Data has been imported successfully.",
+	"confirm_reset": "Are you sure you want to reset the data? This action cannot be undone.",
+	"info_reset_done": "Data has been reset.",
+	"confirm_load_demo": "Do you want to load demo data? Your existing data will be overwritten.",
+	"info_demo_loaded": "Demo data has been loaded.",
+	"info_export_done": "Data has been exported.",
+
+	"reset_data": "Reset data",
+	"reset_info": "This will delete all your saved goals from the app.",
+	"reset_button": "Reset all goals",
+	"reset_confirm": "Are you sure you want to delete all goals? This action cannot be undone!",
+
+	"categories": {
+		"all": "All",
+		"health": "Health",
+		"personal": "Personal development",
+		"work": "Work",
+		"finance": "Finance",
+		"other": "Other"
+	},
+
+	"weekdays": {
+		"monday": "Monday",
+		"tuesday": "Tuesday",
+		"wednesday": "Wednesday",
+		"thursday": "Thursday",
+		"friday": "Friday",
+		"saturday": "Saturday",
+		"sunday": "Sunday",
+		"daily": "Daily"
+	},
+
+	"months": {
+		"january": "January",
+		"february": "February",
+		"march": "March",
+		"april": "April",
+		"may": "May",
+		"june": "June",
+		"july": "July",
+		"august": "August",
+		"september": "September",
+		"october": "October",
+		"november": "November",
+		"december": "December"
+	},
+
+	"charts": {
+		"heatmap": "Heatmap",
+		"bar": "Bar Chart",
+		"line": "Line Chart",
+		"date": "Date"
+	},
+
+	"help": {
+		"help": "Help",
+		"title": "Help & User Guide",
+		"intro": "Here you'll find useful information on how to use the goal management app.",
+		"sections": {
+			"add_goal": {
+				"title": "Adding a New Goal",
+				"content": "Click 'Add New Goal', fill in the title, description, category, and select the days you want to perform it. You can select 'Daily' or specific weekdays."
+			},
+			"complete_goal": {
+				"title": "Goal achievement",
+				"content": "On the main screen, click '✔️ Mark as Done' to mark a goal as completed for today. This updates the streak and statistics."
+			},
+			"end_day": {
+				"title": "Ending the Day",
+				"content": "At the end of each day, click the 'End Day' button. The app will move the date forward and update the streaks and stats for your goals."
+			},
+			"stats": {
+				"title": "Statistics",
+				"content": "Go to the 'Statistics' tab to see your progress using Heatmap, Bar Chart, or Line Chart. Choose a goal and a date range to explore your performance."
+			},
+			"archive": {
+				"title": "Archiving Goals",
+				"content": "You can archive completed goals and restore them later. Use the archive button next to each goal."
+			},
+			"settings": {
+				"title": "Settings",
+				"content": "In settings, you can export/import your data, reset goals, change language and switch to dark mode."
+			}
+		},
+		"about_title": "About the application",
+		"about_content": "Learn more about our app by clicking the link below.",
+		"about_button": "More about...",
+		"repo_title": "Source code on GitHub",
+		"repo_text": "Browse our repository and join the project’s development.",
+		"repo_link": "Go to the repository"
+	},
+
+	"about": {
+		"title": "Your goals. Your pace. Your rules.",
+		"paragraph_1": "This app was created for anyone who wants to make a change – without pressure, stress, or a million confusing options. Whether you want to drink more water every day, finally start exercising, or just remind yourself that Monday isn’t the end of the world – you’re in the right place.",
+		"paragraph_2": "Choose the days you want to commit to",
+		"paragraph_3": "Assign a category to keep things organized",
+		"paragraph_4": "Add a description if you want to motivate yourself",
+		"paragraph_5": "Then just come back and check off your progress",
+		"paragraph_6": "Clean design, user-friendly interface, dark mode for night owls – everything you need to finally start and not stop.",
+		"paragraph_7": "You don’t have to be perfect to be consistent.",
+		"paragraph_8": "This isn’t just another life management app. It’s your personal space for small (and big) wins."
+	},
+
+	"load_demo_data": "Load demo data",
+	"demo_prompt": "Don't have any goals yet? Load sample data",
+	"not_found": "Oops! This page does not exist.",
+	"not_found_btn": "←  Return to home page.",
+	"confirm_delete": "Delete Goal",
+	"confirm_delete_message": "Are you sure you want to delete this goal? This action cannot be undone.",
+	"yes": "Yes",
+	"no": "No",
+	"today": "Today",
+	"goal_congrats": {
+		"completed_message": "🎉 Congrats! \"{{title}}\" now has a {{streak}}-day streak! 🏆"
+	}
+}
