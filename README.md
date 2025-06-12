@@ -1,8 +1,13 @@
-# App-react
+# Habito
 
-[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://adrian-kowal.github.io/app-react) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://migacz-dawid.github.io/habito-react-tailwindcss/) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
-**App-react to prosty i elegancki tracker nawyków, który pomaga użytkownikom budować codzienne zwycięstwa bez zbędnego stresu, oferując czytelny interfejs, tryb ciemny i wsparcie wielojęzyczne.**
+**Habito to prosty i elegancki tracker nawyków, który pomaga użytkownikom budować codzienne zwycięstwa bez zbędnego stresu, oferując czytelny interfejs, tryb ciemny i wsparcie wielojęzyczne.**
+
+---
+
+## 🔗 Demo  
+👉 [Zobacz stronę na żywo](https://migacz-dawid.github.io/habito-react-tailwindcss/)  
 
 ---
 
@@ -11,14 +16,13 @@
 2. [Główne zalety](#advantages)  
 4. [Technologie](#technologies)  
 5. [Biblioteki i narzędzia](#libraries)
-6. [Funkcjonalności](#functionalities)  
-7. [Instalacja](#instalation)  
-8. [Użytkowanie](#użytkowanie)  
+6. [Funkcjonalności](#functionalities)
+7. [Użytkowanie](#use)  
+8. [Instalacja](#instalation)  
 9. [Kontrybucja](#kontrybucja)  
-10. [Licencja](#licencja)  
+10. [Licencja](#license)  
 
 ---
-
 ## <a name="description"></a>🔍 Opis projektu
 **Twoje cele. Twoje tempo. Twoje zasady.**  
 Ta aplikacja powstała z myślą o wszystkich, którzy chcą coś zmienić – ale bez presji, spiny i miliona nieczytelnych opcji. Niezależnie od tego, czy chcesz codziennie pić więcej wody, w końcu zacząć ćwiczyć, czy po prostu pamiętać, że poniedziałek to nie koniec świata – jesteś w dobrym miejscu.
@@ -75,6 +79,16 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 - Zarządzanie stanem i lokalne przechowywanie (usehooks-ts, use-local-storage)  
 
 ---
+
+## <a name="use"></a>🧑‍💻 Użytkowanie
+1. Otwórz aplikację  
+2. Przełącz Dark/Light mode w prawym górnym rogu.  
+3. Wybierz dni i kategorie dla swoich nawyków.  
+4. Po zakończeniu dnia wróć i odhacz postępy.  
+5. Przełącz język za pomocą przycisku PL/EN.  
+
+---
+
 ## <a name="instalation"></a>🚀 Instalacja
 ```bash
 # 1. Sklonuj repozytorium
@@ -88,3 +102,10 @@ npm install
 
 # 4. Uruchom w trybie deweloperskim
 npm run dev
+
+---
+
+## <a name="license"></a>📄 Licencja
+© 2025 Dawid Migacz. All Rights Reserved.  
+
+---
