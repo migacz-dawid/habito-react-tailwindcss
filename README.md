@@ -7,19 +7,19 @@
 ---
 
 ## 📑 Spis treści
-1. [Opis projektu](#opis-projektu)  
-2. [Dlaczego warto mnie zatrudnić](#dlaczego-warto-mnie-zatrudnić)  
-3. [Funkcjonalności](#funkcjonalności)  
-4. [Technologie](#technologie)  
-5. [Biblioteki i narzędzia](#biblioteki-i-narzędzia)  
-6. [Instalacja](#instalation)  
-7. [Użytkowanie](#użytkowanie)  
-8. [Kontrybucja](#kontrybucja)  
-9. [Licencja](#licencja)  
+1. [Opis projektu](#description)  
+2. [Główne zalety](#advantages)  
+4. [Technologie](#technologies)  
+5. [Biblioteki i narzędzia](#libraries)
+6. [Funkcjonalności](#functionalities)  
+7. [Instalacja](#instalation)  
+8. [Użytkowanie](#użytkowanie)  
+9. [Kontrybucja](#kontrybucja)  
+10. [Licencja](#licencja)  
 
 ---
 
-## 🔍 Opis projektu
+## <a name="description"></a>🔍 Opis projektu
 **Twoje cele. Twoje tempo. Twoje zasady.**  
 Ta aplikacja powstała z myślą o wszystkich, którzy chcą coś zmienić – ale bez presji, spiny i miliona nieczytelnych opcji. Niezależnie od tego, czy chcesz codziennie pić więcej wody, w końcu zacząć ćwiczyć, czy po prostu pamiętać, że poniedziałek to nie koniec świata – jesteś w dobrym miejscu.
 
@@ -34,7 +34,7 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 
 ---
 
-## 💼 Główne zalety
+## <a name="advantages"></a>💼 Główne zalety
 - **Responsywność i mobile-first** – projektowane UI działają płynnie na każdym urządzeniu.  
 - **PWA z wsparciem offline** – użytkownicy mogą korzystać nawet bez połączenia z internetem.  
 - **Wielojęzyczność (i18next)** – szybkie przełączanie między wersją polską i angielską.  
@@ -44,17 +44,8 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 
 ---
 
-## 🌟 Funkcjonalności
-- PWA (offline, instalacja na pulpit)  
-- Dark Mode z przełącznikiem  
-- Wielojęzyczność (i18next: PL/EN)  
-- Animacje (framer-motion, react-confetti)  
-- Wykresy i wizualizacje (recharts, @nivo/calendar, @nivo/bar, @nivo/line)  
-- Zarządzanie stanem i lokalne przechowywanie (usehooks-ts, use-local-storage)  
 
----
-
-## 💻 Technologie
+## <a name="technologies"></a>💻 Technologie
 - Vite  
 - React  
 - Tailwind CSS  
@@ -63,7 +54,7 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 
 ---
 
-## 🔧 Biblioteki i narzędzia
+## <a name="libraries"></a>🔧 Biblioteki i narzędzia
 - **react-icons** – ikony wektorowe w React  
 - **framer-motion** – zaawansowane animacje  
 - **react-confetti** – efekt konfetti po ukończeniu wyzwania  
@@ -75,6 +66,15 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 
 ---
 
+## <a name="functionalities"></a>🌟 Funkcjonalności
+- PWA (offline, instalacja na pulpit)  
+- Dark Mode z przełącznikiem  
+- Wielojęzyczność (i18next: PL/EN)  
+- Animacje (framer-motion, react-confetti)  
+- Wykresy i wizualizacje (recharts, @nivo/calendar, @nivo/bar, @nivo/line)  
+- Zarządzanie stanem i lokalne przechowywanie (usehooks-ts, use-local-storage)  
+
+---
 ## <a name="instalation"></a>🚀 Instalacja
 ```bash
 # 1. Sklonuj repozytorium
