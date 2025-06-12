@@ -12,7 +12,7 @@
 3. [Funkcjonalności](#funkcjonalności)  
 4. [Technologie](#technologie)  
 5. [Biblioteki i narzędzia](#biblioteki-i-narzędzia)  
-6. [Instalacja](#instalacja)  
+6. [Instalacja](#instalation)  
 7. [Użytkowanie](#użytkowanie)  
 8. [Kontrybucja](#kontrybucja)  
 9. [Licencja](#licencja)  
@@ -75,33 +75,7 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 
 ---
 
-## 🚀 Instalacja
-```bash
-# 1. Sklonuj repozytorium
-git clone https://github.com/adrian-kowal/app-react.git
-
-# 2. Przejdź do katalogu projektu
-cd app-react
-
-# 3. Zainstaluj zależności
-npm install
-
-# 4. Uruchom w trybie deweloperskim
-npm run dev
-
----
-
-## <a name="glowne-zalety"></a>💎 Główne zalety
-- **Responsywność i mobile-first** – UI działa płynnie na każdym urządzeniu.  
-- **PWA z wsparciem offline** – korzystaj nawet bez internetu.  
-- **Wielojęzyczność (i18next)** – płynne przełączanie PL/EN.  
-- **Dark Mode z lokalnym przechowywaniem** – dostosowany do rytmu dnia.  
-- **Optymalizacja wydajności** – Vite, lazy-loading, minimalne bundle’e.  
-- **Animacje i wizualizacje** – framer-motion, react-confetti, @nivo, recharts.  
-
----
-
-## <a name="instalacja"></a>🚀 Instalacja
+## <a name="instalation"></a>🚀 Instalacja
 ```bash
 # 1. Sklonuj repozytorium
 git clone https://github.com/adrian-kowal/app-react.git
