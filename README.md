@@ -1,6 +1,6 @@
 # Habito
 
-[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://migacz-dawid.github.io/habito-react-tailwindcss/) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://migacz-dawid.github.io/habito-react-tailwindcss/) 
 
 **Habito to prosty i elegancki tracker nawyków, który pomaga użytkownikom budować codzienne zwycięstwa bez zbędnego stresu, oferując czytelny interfejs, tryb ciemny i wsparcie wielojęzyczne.**
 
