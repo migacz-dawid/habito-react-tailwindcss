@@ -17,8 +17,9 @@
 4. [Technologie](#technologies)  
 5. [Biblioteki i narzędzia](#libraries)
 6. [Funkcjonalności](#functionalities)
-7. [Użytkowanie](#use)  
-8. [Instalacja](#instalation)  
+7. [Instalacja](#instalation)
+8. [Deployment (GitHub Pages)](#deployment) 
+9. [Użytkowanie](#use)  
 
 ---
 ## <a name="description"></a>🔍 Opis projektu
@@ -76,6 +77,34 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 - Wykresy i wizualizacje (recharts, @nivo/calendar, @nivo/bar, @nivo/line)  
 - Zarządzanie stanem i lokalne przechowywanie (usehooks-ts, use-local-storage)  
 
+
+---
+## <a name="instalation"></a>🚀 Instalacja
+1. Sklonuj repozytorium  
+   ```bash
+   git clone https://github.com/migacz-dawid/habito-react-tailwindcss
+  
+2. Przejdź do katalogu projektu: 
+   ```bash
+   cd habito-react-tailwindcss
+
+3. Zainstaluj zależności:  
+   ```bash
+   npm install
+  
+4. Uruchom w trybie deweloperskim: 
+   ```bash
+   npm run dev
+
+---
+
+## <a name="deployment"></a>📦 Deployment (GitHub Pages)
+Po uruchomieniu `npm run build` pliki produkcyjne tworzone są bezpośrednio w katalogu `docs/`, który GitHub Pages traktuje jako źródło demo.
+
+1. Zbuduj aplikację:
+   ```bash
+   npm run build
+
 ---
 
 ## <a name="use"></a>🧑‍💻 Użytkowanie
@@ -84,20 +113,3 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 3. Wybierz dni i kategorie dla swoich nawyków.  
 4. Po zakończeniu dnia wróć i odhacz postępy.  
 5. Przełącz język za pomocą przycisku PL/EN.  
-
----
-
-## <a name="instalation"></a>🚀 Instalacja
-```bash
-# 1. Sklonuj repozytorium
-git clone https://github.com/adrian-kowal/app-react.git
-
-# 2. Przejdź do katalogu projektu
-cd app-react
-
-# 3. Zainstaluj zależności
-npm install
-
-# 4. Uruchom w trybie deweloperskim
-npm run dev
-
