@@ -1,12 +1,77 @@
-# React + Vite
+# App-react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://adrian-kowal.github.io/app-react) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
-Currently, two official plugins are available:
+**App-react to prosty i elegancki tracker nawyków, który pomaga użytkownikom budować codzienne zwycięstwa bez zbędnego stresu, oferując czytelny interfejs, tryb ciemny i wsparcie wielojęzyczne.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📑 Spis treści
+1. [Opis projektu](#opis-projektu)  
+2. [Dlaczego warto mnie zatrudnić](#dlaczego-warto-mnie-zatrudnić)  
+3. [Funkcjonalności](#funkcjonalności)  
+4. [Technologie](#technologie)  
+5. [Instalacja](#instalacja)  
+6. [Użytkowanie](#użytkowanie)  
+7. [Kontrybucja](#kontrybucja)  
+8. [Licencja](#licencja)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🔍 Opis projektu
+**Twoje cele. Twoje tempo. Twoje zasady.**  
+Ta aplikacja powstała z myślą o wszystkich, którzy chcą coś zmienić – ale bez presji, spiny i miliona nieczytelnych opcji. Niezależnie od tego, czy chcesz codziennie pić więcej wody, w końcu zacząć ćwiczyć, czy po prostu pamiętać, że poniedziałek to nie koniec świata – jesteś w dobrym miejscu.
+
+- 📅 Wybierz dni, w które chcesz działać  
+- 🗂️ Przypisz kategorię, żeby wszystko było uporządkowane  
+- ✍️ Dodaj opis, jeśli chcesz sobie dodać motywacji  
+- ✅ A potem już tylko wracaj i odhaczaj postępy  
+
+Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszystko, czego potrzeba, by w końcu zacząć i nie przestać.  
+> *Nie musisz być perfekcyjny, żeby być konsekwentny.*  
+> *To nie kolejna apka do zarządzania życiem. To Twoja osobista przestrzeń do małych (i dużych) zwycięstw.*
+
+---
+
+## 💼 Dlaczego warto mnie zatrudnić
+- **Responsywność i mobile-first** – projektowane UI działają płynnie na każdym urządzeniu.  
+- **PWA z wsparciem offline** – użytkownicy mogą korzystać nawet bez połączenia z internetem.  
+- **Wielojęzyczność (i18next)** – szybkie przełączanie między wersją polską i angielską.  
+- **Dark Mode z lokalnym przechowywaniem preferencji** – przyjazne dla oczu i dostosowane do rytmu dnia.  
+- **Optymalizacja wydajności** – dzięki Vite, lazy-loading i zoptymalizowanym bundle’om.  
+- **Animacje i wizualizacje danych** – płynne efekty z framer-motion oraz interaktywne wykresy z @nivo i recharts.  
+
+---
+
+## 🌟 Funkcjonalności
+- PWA (offline, instalacja na pulpit)  
+- Dark Mode z przełącznikiem  
+- Wielojęzyczność (i18next: PL/EN)  
+- Animacje (framer-motion, react-confetti)  
+- Wykresy i wizualizacje (recharts, @nivo/calendar, @nivo/bar, @nivo/line)  
+- Zarządzanie stanem i lokalne przechowywanie (usehooks-ts, use-local-storage)  
+
+---
+
+## 💻 Technologie
+- Vite  
+- React  
+- Tailwind CSS  
+- JavaScript (ES6+)  
+- HTML5  
+
+---
+
+## 🚀 Instalacja
+```bash
+# 1. Sklonuj repozytorium
+git clone https://github.com/adrian-kowal/app-react.git
+
+# 2. Przejdź do katalogu projektu
+cd app-react
+
+# 3. Zainstaluj zależności
+npm install
+
+# 4. Uruchom w trybie deweloperskim
+npm run dev
