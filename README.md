@@ -2,7 +2,8 @@
 
 [![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://migacz-dawid.github.io/habito-react-tailwindcss/) 
 
-**Habito to prosty i elegancki tracker nawyków, który pomaga użytkownikom budować codzienne zwycięstwa bez zbędnego stresu, oferując czytelny interfejs, tryb ciemny i wsparcie wielojęzyczne.**
+**Habito to prosty i elegancki tracker nawyków, który pomaga użytkownikom budować codzienne zwycięstwa bez zbędnego stresu, oferując czytelny interfejs, tryb ciemny i wsparcie wielojęzyczne.** 
+Aby ułatwić symulację działania aplikacji, dodano przycisk **„Zakończ dzień”**, który pozwala szybko przejść do kolejnego dnia i sprawdzić, jak aplikacja reaguje w dalszym ciągu – bez potrzeby czekania na rzeczywisty upływ czasu.
 
 ---
 
