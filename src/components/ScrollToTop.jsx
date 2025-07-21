@@ -1,3 +1,7 @@
+/**
+ * ScrollToTop — scroll to top on page change
+ */
+
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 

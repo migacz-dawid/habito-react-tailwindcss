@@ -24,7 +24,7 @@ const useIsMobile = (breakpoint = 768) => {
 
 		mediaQuery.addEventListener('change', handleChange)
 
-		// Na wypadek zmian w UA po przełączeniu urządzenia
+		// Check on mount (in case the breakpoint changes while the app is mounted)
 		handleChange()
 
 		return () => {

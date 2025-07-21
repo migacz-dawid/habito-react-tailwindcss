@@ -1,8 +1,12 @@
+/**
+ * GoalsStatusFilter - Component for filtering goals by status
+ */
+
 import FilterButton from '../ui/FilterButton'
 
 const GoalsStatusFilter = ({ filter, setFilter, t }) => {
 	return (
-		<div className='mb-9 mt-3 flex flex-wrap gap-4'>
+		<div className='flex flex-wrap gap-4 mb-9 mt-3'>
 			<FilterButton active={filter === 'AllTask'} onClick={() => setFilter('AllTask')} color='main'>
 				{t('all')}
 			</FilterButton>

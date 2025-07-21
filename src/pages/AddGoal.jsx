@@ -1,3 +1,7 @@
+/**
+ * AddGoal — add new goal page
+ */
+
 import { AiOutlinePlusSquare } from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom'
 import { useLocalStorage } from 'usehooks-ts'
@@ -36,7 +40,7 @@ const AddGoal = () => {
 	}
 
 	return (
-		<section className='max-w-xl mx-2 sm:mx-auto p-5 md:p-6 bg-white rounded-lg shadow-2xl dark:bg-gray-800 dark:text-gray-200'>
+		<section className='p-5 md:p-6 max-w-xl mx-2 sm:mx-auto bg-white dark:bg-gray-800 dark:text-gray-200 rounded-lg shadow-2xl'>
 			<h1 className='flex items-center text-2xl font-bold mb-4 text-mainColor-600'>
 				<AiOutlinePlusSquare className='mr-2 text-3xl' />
 				{t('add_new_goal')}

@@ -29,7 +29,7 @@ const Help = () => {
 	}
 
 	return (
-		<section className='max-w-3xl mx-auto px-4 py-8'>
+		<section className='px-4 py-8 mx-auto max-w-3xl'>
 			<h1 className='text-3xl font-bold text-mainColor-600 dark:text-blue-500 mb-6'>{t('help.title')}</h1>
 			<p className='text-gray-600 dark:text-gray-400  mb-8'>{t('help.intro')}</p>
 
@@ -46,10 +46,11 @@ const Help = () => {
 						/>
 					)
 				})}
-				<div className='bg-white rounded-lg shadow-2xl p-5 dark:bg-gray-800'>
+				
+				<div className='p-5 bg-white dark:bg-gray-800 rounded-lg shadow-2xl'>
 					<div className='flex items-center space-x-3'>
-						<h2 className='flex items-center text-xl font-semibold text-mainColor-600 mb-2'>
-							<AiOutlineInfoCircle className='text-3xl mr-2 text-dangerColor-600' />
+						<h2 className='flex items-center mb-2 text-xl font-semibold text-mainColor-600'>
+							<AiOutlineInfoCircle className='mr-2 text-3xl text-dangerColor-600' />
 							{t('help.about_title')}
 						</h2>
 					</div>
@@ -62,7 +63,8 @@ const Help = () => {
 						</Link>
 					</div>
 				</div>
-				<div className='bg-white rounded-lg shadow-2xl p-5 dark:bg-gray-800'>
+
+				<div className='p-5 bg-white dark:bg-gray-800 rounded-lg shadow-2xl'>
 					<div className='flex items-center space-x-3'>
 						<h2 className='flex items-center text-xl font-semibold text-mainColor-600 mb-2'>
 							<AiFillGithub className='text-3xl mr-2 text-gray-800 dark:text-gray-100' />

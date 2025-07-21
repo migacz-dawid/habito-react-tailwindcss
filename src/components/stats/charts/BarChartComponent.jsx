@@ -1,5 +1,5 @@
-import { ResponsiveBar } from '@nivo/bar'
 import { useTranslation } from 'react-i18next'
+import { ResponsiveBar } from '@nivo/bar'
 import useIsMobile from '../../../hooks/useIsMobile'
 import { useTheme } from '../../../context/ThemeContext'
 
@@ -8,7 +8,7 @@ const BarChartComponent = ({ goal }) => {
 	const { darkMode } = useTheme()
 	const { t } = useTranslation()
 
-	if (isMobile === null) return null // lub spinner
+	if (isMobile === null) return null 
 
 	if (!goal || !goal.history) return <p>Brak danych do wyświetlenia 🔍</p>
 
@@ -26,7 +26,7 @@ const BarChartComponent = ({ goal }) => {
 	}
 
 	return (
-		<div className='h-[500px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-4'>
+		<div className='p-4 h-[500px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl'>
 			<ResponsiveBar
 				data={data}
 				keys={['value']}
@@ -57,7 +57,7 @@ const BarChartComponent = ({ goal }) => {
 				enableLabel={!isMobile}
 				animate={false}
 				tooltip={({ id, value, indexValue }) => (
-					<div className='p-2 bg-white dark:bg-gray-700 text-black dark:text-white rounded shadow text-sm font-medium space-y-1'>
+					<div className='p-2 text-sm font-medium text-black dark:text-white bg-white dark:bg-gray-700 rounded shadow space-y-1'>
 						<div>
 							<strong>{t('charts.date')}:</strong> {indexValue}
 						</div>

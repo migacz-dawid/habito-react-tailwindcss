@@ -1,7 +1,11 @@
-import PropTypes from 'prop-types'
+/**
+ * ChartRenderer — component for rendering different types of charts
+ */
+
 import HeatMapChart from './charts/HeatMapChart'
 import BarChartComponent from './charts/BarChartComponent'
 import LineChartComponent from './charts/LineChartComponent'
+import PropTypes from 'prop-types'
 
 const ChartRenderer = ({ type, goal, isMobile, startDate, endDate }) => {
 	const chartKey = `${type}-${isMobile}-${startDate}-${endDate}`

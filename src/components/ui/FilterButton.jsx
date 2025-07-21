@@ -1,3 +1,7 @@
+/**
+ * FilterButton — a button for filtering items
+ */
+
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 

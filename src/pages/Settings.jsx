@@ -85,8 +85,8 @@ const Settings = () => {
 	}
 
 	return (
-		<section className='max-w-3xl mx-auto p-6 '>
-			<h1 className='flex items-center text-2xl font-bold mb-4 text-mainColor-600 dark:text-blue-500'>
+		<section className='mx-auto p-6 max-w-3xl'>
+			<h1 className='flex items-center mb-4 text-2xl font-bold text-mainColor-600 dark:text-blue-500'>
 				<AiFillSetting className='mr-2 text-3xl' /> {t('settings')}
 			</h1>
 

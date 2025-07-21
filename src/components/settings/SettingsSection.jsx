@@ -1,14 +1,18 @@
+/**
+ * SettingsSection — a single settings section component
+ */
+
 import PropTypes from 'prop-types'
 
 const SettingsSection = ({ icon, title, description, children }) => {
 	return (
-		<div className='bg-white p-6 rounded-xl shadow-2xl mb-8 dark:bg-gray-800'>
-			<h2 className='flex items-center text-xl font-semibold mb-4 text-mainColor-600'>
+		<div className='mb-8 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-2xl'>
+			<h2 className='flex items-center mb-4 text-xl font-semibold text-mainColor-600'>
 				{icon && <span className='mr-2 text-2xl'>{icon}</span>}
 				{title}
 			</h2>
 			{description && (
-				<p className='text-gray-600 dark:text-gray-500 my-5'>{description}</p>
+				<p className='my-5 text-gray-600 dark:text-gray-500'>{description}</p>
 			)}
 			<div className='flex gap-5 flex-col sm:flex-row sm:items-center'>
 				{children}

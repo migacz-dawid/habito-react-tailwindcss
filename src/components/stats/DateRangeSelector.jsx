@@ -1,34 +1,28 @@
-import PropTypes from 'prop-types'
+/**
+ * DateRangeSelector — displays the date range selector for the chart
+ */
+
 import { useTranslation } from 'react-i18next'
-import ActionButton from '../ui/ActionButton' 
-import { AiFillCalendar } from 'react-icons/ai'
 import { MdOutlineSync } from 'react-icons/md'
+import ActionButton from '../ui/ActionButton'
+import LabeledSelect from '../ui/LabeledSelect'
+import PropTypes from 'prop-types'
 
 const DateRangeSelector = ({ isMobile, startDate, setStartDate, endDate, setEndDate, monthOptions }) => {
 	const { t } = useTranslation()
 
 	if (isMobile) {
-		// MOBILE: one select
 		return (
 			<div className='mb-8'>
-				<label className='flex items-center mb-2 text-gray-600 dark:text-gray-400'>
-					<AiFillCalendar className='mr-1 text-xl text-dangerColor-600' />
-					{t('select_month')}
-				</label>
-				<select
+				<LabeledSelect
+					label={t('select_month')}
 					value={startDate || ''}
 					onChange={e => {
 						setStartDate(e.target.value)
 						setEndDate(e.target.value)
 					}}
-					className='w-full border rounded px-3 py-2 dark:bg-gray-600 dark:text-gray-300 dark:border-none'>
-					<option value=''>{t('select_month')}</option>
-					{monthOptions.map(opt => (
-						<option key={opt.value} value={opt.value}>
-							{opt.label}
-						</option>
-					))}
-				</select>
+					options={monthOptions}
+				/>
 			</div>
 		)
 	}
@@ -37,42 +31,20 @@ const DateRangeSelector = ({ isMobile, startDate, setStartDate, endDate, setEndD
 	return (
 		<div className='flex flex-col md:flex-row gap-6 mb-8'>
 			{/* from */}
-			<div className='flex-1'>
-				<label className='flex items-center mb-2 text-gray-600 dark:text-gray-300'>
-					<AiFillCalendar className='mr-1 text-xl text-dangerColor-600' />
-					{t('from')}
-				</label>
-				<select
-					value={startDate || ''}
-					onChange={e => setStartDate(e.target.value)}
-					className='w-full border rounded px-3 py-2 dark:bg-gray-600 dark:text-gray-300 dark:border-none'>
-					<option value=''>{t('select_month')}</option>
-					{monthOptions.map(opt => (
-						<option key={opt.value} value={opt.value}>
-							{opt.label}
-						</option>
-					))}
-				</select>
-			</div>
+			<LabeledSelect
+				label={t('from')}
+				value={startDate || ''}
+				onChange={e => setStartDate(e.target.value)}
+				options={monthOptions}
+			/>
 
 			{/* To */}
-			<div className='flex-1'>
-				<label className='flex items-center mb-2 text-gray-600 dark:text-gray-400'>
-					<AiFillCalendar className='mr-1 text-xl text-dangerColor-600' />
-					{t('to')}
-				</label>
-				<select
-					value={endDate || ''}
-					onChange={e => setEndDate(e.target.value)}
-					className='w-full border rounded px-3 py-2 dark:bg-gray-600 dark:text-gray-300 dark:border-none'>
-					<option value=''>{t('select_month')}</option>
-					{monthOptions.map(opt => (
-						<option key={opt.value} value={opt.value}>
-							{opt.label}
-						</option>
-					))}
-				</select>
-			</div>
+			<LabeledSelect
+				label={t('to')}
+				value={endDate || ''}
+				onChange={e => setEndDate(e.target.value)}
+				options={monthOptions}
+			/>
 
 			{/* Reset */}
 			<div className='flex items-end'>

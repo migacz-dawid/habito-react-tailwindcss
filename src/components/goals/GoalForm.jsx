@@ -1,9 +1,14 @@
-import PropTypes from 'prop-types'
+/**
+ * GoalForm - a form for adding/editing goals
+ */
+
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AiFillSave, AiTwotoneCalendar, AiFillCloseCircle } from 'react-icons/ai'
 import ActionButton from '../ui/ActionButton'
 import { getCategoryOptions } from '../../utils/getCategoryOptions'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 	const { t } = useTranslation()
@@ -30,9 +35,20 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 		{ key: 'sunday', label: t('weekdays.sunday') },
 	]
 
+	const formContainerClasses = 'space-y-4'
+	const labelClasses = 'block mb-1 text-sm font-medium text-gray-700 dark:text-gray-500'
+	const inputBaseClasses =
+		'w-full px-3 py-2 border rounded dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2'
+	const textareaClasses =
+		'w-full px-3 py-2 border rounded border-gray-300 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-mainColor-500'
+	const selectClasses ='dark:text-gray-400'
+	const errorTextClasses = 'mt-1 text-sm text-dangerColor-600'
+	const dayButtonBaseClasses = 'px-3 py-1 text-sm border rounded-full transition-colors'
+	const selectedDayClasses = 'text-white bg-mainColor-600 dark:text-gray-200 dark:border-gray-500'
+	const unselectedDayClasses =
+		'text-gray-800 bg-white border-gray-300 hover:text-white hover:bg-mainColor-500 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-800 dark:hover:bg-mainColor-500'
+
 	const categoryOptions = getCategoryOptions(t) // without "all"
-
-
 
 	const toggleDay = dayKey => {
 		if (dayKey === dailyKey) {
@@ -79,42 +95,40 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 		})
 	}
 
-
 	return (
-		<form className='space-y-4'>
+		<form className={formContainerClasses}>
 			<div>
-				<label className='block text-sm font-medium text-gray-700 dark:text-gray-500 mb-1'>{t('title')} *</label>
+				<label className={labelClasses}>{t('title')} *</label>
 				<input
 					type='text'
 					value={title}
 					onChange={e => setTitle(e.target.value)}
-					className={`w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ${
+					className={clsx(
+						inputBaseClasses,
 						errors.title
 							? 'border-dangerColor-600 focus:ring-dangerColor-600'
 							: 'border-gray-300 focus:ring-mainColor-500'
-					}`}
+					)}
 					placeholder={t('title')}
 				/>
-				{errors.title && <p className='text-dangerColor-600 text-sm mt-1'>{t(errors.title)}</p>}
+				{errors.title && <p className='mt-1 text-sm text-dangerColor-600'>{t(errors.title)}</p>}
 			</div>
 
 			<div>
-				<label className='block text-sm font-medium text-gray-700 dark:text-gray-500 mb-1'>{t('description')}</label>
+				<label className={labelClasses}>{t('description')}</label>
 				<textarea
 					value={description}
 					onChange={e => setDescription(e.target.value)}
 					rows='3'
-					className='w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainColor-500 dark:bg-gray-700 dark:border-gray-600'
+					className={textareaClasses}
 					placeholder={t('optional_description')}
 				/>
 			</div>
 
 			<div>
-				<label className='block text-sm font-medium text-gray-700 dark:text-gray-500 mb-1'>{t('category')}</label>
-				<select
-					value={category}
-					onChange={e => setCategory(e.target.value)}
-					className='w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainColor-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400'>
+				<label className={labelClasses}>{t('category')}</label>
+				<select value={category} onChange={e => setCategory(e.target.value)} className={clsx(textareaClasses, selectClasses)}
+				>
 					{categoryOptions.map(({ key, label }) => (
 						<option key={key} value={key}>
 							{label}
@@ -124,7 +138,7 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 			</div>
 
 			<div className='mb-4'>
-				<label className='flex items-center pt-2 text-sm font-medium text-gray-700 dark:text-gray-500 mb-2'>
+				<label className='flex items-center mb-2 pt-2 text-sm font-medium text-gray-700 dark:text-gray-500'>
 					<AiTwotoneCalendar className='mr-1 text-2xl' />
 					{t('select_days')} *
 				</label>
@@ -132,11 +146,10 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 					<button
 						type='button'
 						onClick={() => toggleDay(dailyKey)}
-						className={`px-3 py-1 rounded-full border text-sm ${
-							selectedDays.includes(dailyKey)
-								? 'bg-mainColor-600  text-white dark:text-gray-200 dark:border-gray-500'
-								: 'bg-white text-gray-800 border-gray-300 hover:bg-mainColor-500 hover:text-white transition-colors dark:text-gray-400 dark:bg-gray-700 dark:border-gray-800 dark:hover:bg-mainColor-500'
-						}`}>
+						className={clsx(
+							dayButtonBaseClasses,
+							selectedDays.includes(dailyKey) ? selectedDayClasses : unselectedDayClasses
+						)}>
 						{t('weekdays.daily')}
 					</button>
 
@@ -145,16 +158,15 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 							key={key}
 							type='button'
 							onClick={() => toggleDay(key)}
-							className={`px-3 py-1 rounded-full border text-sm ${
-								selectedDays.includes(key)
-									? 'bg-mainColor-600 text-white dark:text-gray-200 dark:border-gray-500'
-									: 'bg-white text-gray-800 border-gray-300 hover:bg-mainColor-500 hover:text-white transition-colors dark:text-gray-400 dark:bg-gray-700 dark:border-gray-800 dark:hover:bg-mainColor-500'
-							}`}>
+							className={clsx(
+								dayButtonBaseClasses,
+								selectedDays.includes(key) ? selectedDayClasses : unselectedDayClasses
+							)}>
 							{label.slice(0, 2)}
 						</button>
 					))}
 				</div>
-				{errors.frequency && <p className='text-dangerColor-600 text-sm mt-1'>{t(errors.frequency)}</p>}
+				{errors.frequency && <p className={errorTextClasses}>{t(errors.frequency)}</p>}
 			</div>
 
 			<div className='flex flex-row justify-between gap-2'>

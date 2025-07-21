@@ -1,3 +1,7 @@
+/**
+ * GoalsList - Displays a list of goals
+ */
+
 import { AnimatePresence, motion } from 'framer-motion'
 import { fadeInUpVariant } from '../../animations/index'
 import GoalCard from './GoalCard'

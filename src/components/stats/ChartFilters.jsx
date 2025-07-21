@@ -1,7 +1,12 @@
-import PropTypes from 'prop-types'
+/**
+ * ChartFilters - displays filters for the chart
+ */
+
 import { useTranslation } from 'react-i18next'
 import { MdOutlineTaskAlt } from 'react-icons/md'
 import { AiOutlineBarChart } from 'react-icons/ai'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 const ChartFilters = ({
 	goals,
@@ -28,10 +33,10 @@ const ChartFilters = ({
 				<select
 					value={selectedGoalId}
 					onChange={e => setSelectedGoalId(e.target.value)}
-					className='w-full border rounded px-3 py-2 dark:bg-gray-600 dark:text-gray-300 dark:border-none'>
+					className='w-full px-3 py-2 border rounded dark:bg-gray-600 dark:text-gray-300 dark:border-none'>
 					<option value=''>{t('select')}</option>
 					{sortedGoals.map(goal => (
-						<option key={goal.id} value={goal.id} className={goal.isArchived ? 'text-gray-400' : 'text-black'}>
+						<option key={goal.id} value={goal.id} className={clsx(goal.isArchived ? 'text-gray-400' : 'text-black')}>
 							{`${goal.title}${goal.isArchived ? ` (${t('archive')})` : ''}`}
 						</option>
 					))}
@@ -47,7 +52,7 @@ const ChartFilters = ({
 				<select
 					value={selectedChartType}
 					onChange={e => setSelectedChartType(e.target.value)}
-					className='w-full border rounded px-3 py-2 dark:bg-gray-600 dark:text-gray-300 dark:border-none'>
+					className='w-full px-3 py-2 border rounded dark:text-gray-300 dark:bg-gray-600 dark:border-none'>
 					<option value='Heatmap'>{t('charts.heatmap')}</option>
 					<option value='BarChart'>{t('charts.bar')}</option>
 					<option value='LineChart'>{t('charts.line')}</option>

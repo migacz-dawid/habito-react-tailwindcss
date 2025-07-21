@@ -17,7 +17,7 @@ const HeatMapChart = ({ goal }) => {
 	if (isMobile === null) return null 
 
 	if (!goal?.history || goal.history.length === 0) {
-		return <p className='text-center text-gray-500 italic'>Brak danych do wyświetlenia 🔍</p>
+		return <p className='text-center italic text-gray-500'>Brak danych do wyświetlenia 🔍</p>
 	}
 
 	const data = goal.history.map(entry => ({
@@ -63,7 +63,7 @@ const HeatMapChart = ({ goal }) => {
 					monthBorderColor={borderColor} 
 					colors={heatmapColors}
 					tooltip={({ day, value }) => (
-						<div className='p-2 bg-white dark:bg-gray-700 text-black dark:text-white rounded shadow text-sm font-medium space-y-1'>
+						<div className='p-2 text-sm font-medium text-black dark:text-white bg-white dark:bg-gray-700 rounded shadow space-y-1'>
 							<div>
 								<strong>{t('charts.date')}:</strong> {day}
 							</div>
@@ -100,7 +100,7 @@ const HeatMapChart = ({ goal }) => {
 	const to = sortedDates[sortedDates.length - 1]
 
 	return (
-		<div style={{ height: 300 }} className=' bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-4'>
+		<div style={{ height: 300 }} className='p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl'>
 			<ResponsiveCalendar
 				data={data}
 				from={from}
@@ -113,7 +113,7 @@ const HeatMapChart = ({ goal }) => {
 				dayBorderColor={borderColor} 
 				monthBorderColor={borderColor} 
 				tooltip={({ day, value }) => (
-					<div className='p-2 bg-white dark:bg-gray-700 text-black dark:text-white rounded shadow text-sm font-medium space-y-1'>
+					<div className='p-2 text-sm font-medium text-black dark:text-white bg-white dark:bg-gray-700 rounded shadow space-y-1'>
 						<div>
 							<strong>{t('charts.date')}:</strong> {day}
 						</div>

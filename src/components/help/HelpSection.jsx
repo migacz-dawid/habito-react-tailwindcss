@@ -1,11 +1,16 @@
+/**
+ * HelpSection - a single help section component
+ */
+
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 const HelpSection = ({ title, content, icon: Icon, iconColor = '' }) => {
 	return (
-		<div className="bg-white rounded-lg shadow-2xl p-5 dark:bg-gray-800">
+		<div className="p-5 rounded-lg shadow-2xl bg-white dark:bg-gray-800">
 			<div className="flex items-center space-x-3">
 				<h2 className="flex items-center text-xl font-semibold text-mainColor-600 mb-2">
-					{Icon && <Icon className={`text-3xl mr-2 ${iconColor}`} />}
+					{Icon && <Icon className={clsx('mr-2 text-3xl', iconColor)} />}
 					{title}
 				</h2>
 			</div>

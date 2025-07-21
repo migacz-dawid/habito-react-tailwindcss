@@ -1,3 +1,4 @@
+// Demo data for testing app  
 const mockGoals = [
   {
     "id": "demo-1",

@@ -1,7 +1,11 @@
-import PropTypes from 'prop-types'
+/**
+ * ExportCSVButton — displays the export CSV button for the chart
+ */
+
 import { useTranslation } from 'react-i18next'
 import ActionButton from '../ui/ActionButton'
 import { MdInsertChartOutlined } from 'react-icons/md'
+import PropTypes from 'prop-types'
 
 const ExportCSVButton = ({ goal }) => {
 	const { t } = useTranslation()

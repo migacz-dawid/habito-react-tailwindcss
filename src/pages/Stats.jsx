@@ -83,8 +83,8 @@ const Stats = () => {
 		}) || []
 
 	return (
-		<section className='max-w-5xl mx-auto p-6 min-h-[70vh]'>
-			<h1 className='flex items-center text-3xl font-bold mb-8 text-mainColor-600 dark:text-blue-500'>
+		<section className='mx-auto p-6 max-w-5xl min-h-[70vh]'>
+			<h1 className='flex items-center mb-8 text-3xl font-bold text-mainColor-600 dark:text-blue-500'>
 				{' '}
 				<AiOutlineLineChart className='mr-2 text-4xl text-dangerColor-600' /> {t('your_statistics')}
 			</h1>
@@ -120,7 +120,7 @@ const Stats = () => {
 						endDate={endDate}
 					/>
 				) : (
-					<p className='text-gray-500 dark:text-gray-400 text-center italic'>
+					<p className='text-center italic text-gray-500 dark:text-gray-400'>
 						{t('no_data_in_range')} <MdInsertChartOutlined className='inline ml-2 text-4xl text-mainColor-600' />
 					</p>
 				)
@@ -142,7 +142,7 @@ const Stats = () => {
 				<div className='mt-8'>
 					<Link
 						to='/'
-						className=' px-4 py-3 text-mainColor-600 hover:text-mainColor-500 dark:text-gray-200 dark:hover:text-gray-400 transition-colors'>
+						className='px-4 py-3 text-mainColor-600 hover:text-mainColor-500 dark:text-gray-200 dark:hover:text-gray-400 transition-colors'>
 						← {t('back_to_goals')}
 					</Link>
 				</div>

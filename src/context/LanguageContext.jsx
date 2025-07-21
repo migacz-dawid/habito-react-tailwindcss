@@ -1,3 +1,7 @@
+/**
+ * LanguageProvider — provides the language context for the app
+ */
+
 import { createContext, useState, useEffect } from 'react'
 import i18n from '../i18n/i18n'
 

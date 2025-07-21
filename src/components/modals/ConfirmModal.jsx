@@ -1,8 +1,13 @@
-import PropTypes from 'prop-types'
+/**
+ * ConfirmModal — Modal for confirming an action
+ */
+
 import { motion, AnimatePresence } from 'framer-motion'
 import { popupOverlayAnimation, popupContentAnimation } from '../../animations/index'
 import { useTranslation } from 'react-i18next'
 import { VARIANT_CLASSES } from '../../styles/buttonVariants'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 const ConfirmModal = ({
 	isOpen,
@@ -21,19 +26,19 @@ const ConfirmModal = ({
 				<motion.div
 					key='popup-overlay'
 					{...popupOverlayAnimation}
-					className='fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center'
+					className='fixed flex justify-center items-center inset-0 bg-black bg-opacity-50 z-50 '
 				>
 					<motion.div
 						key='popup-content'
 						{...popupContentAnimation}
-						className='bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl max-w-sm w-full text-center'
+						className='max-w-sm w-full p-6 text-center bg-white dark:bg-gray-800 rounded-xl shadow-xl '
 					>
-						<h2 className='text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2'>
+						<h2 className='mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200'>
                             {t(titleKey)}
 						</h2>
 
 						{messageKey && (
-							<p className='text-gray-700 dark:text-gray-300 mb-4'>
+							<p className='mb-4 text-gray-700 dark:text-gray-300'>
 								{messageKey}
 							</p>
 						)}
@@ -41,14 +46,14 @@ const ConfirmModal = ({
 						<div className='flex justify-center gap-4'>
 							<button
 								onClick={onConfirm}
-								className={`${VARIANT_CLASSES.danger} px-4 py-2 rounded`}
+								className={clsx(VARIANT_CLASSES.danger, 'px-4 py-2 rounded')}
 							>
 								{t(confirmLabel)}
 							</button>
 
 							<button
 								onClick={onCancel}
-								className={`${VARIANT_CLASSES.light} px-4 py-2 rounded`}
+								className={clsx(VARIANT_CLASSES.light, 'px-4 py-2 rounded')}
 							>
 								{t(cancelLabel)}
 							</button>

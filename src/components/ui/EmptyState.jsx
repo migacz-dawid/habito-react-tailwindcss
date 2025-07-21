@@ -1,5 +1,9 @@
-import { AiFillFolderOpen } from 'react-icons/ai'
+/**
+ * EmptyState — displays an empty state message
+ */
+
 import { useTranslation } from 'react-i18next'
+import { AiFillFolderOpen } from 'react-icons/ai'
 import ActionButton from './ActionButton'
 
 const EmptyState = ({ message, showDemoAction = false, onDemoLoad }) => {

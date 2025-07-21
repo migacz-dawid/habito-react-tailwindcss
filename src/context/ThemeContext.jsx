@@ -1,3 +1,7 @@
+/**
+ * ThemeProvider - provides the theme context for the app
+ */
+
 import { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext();

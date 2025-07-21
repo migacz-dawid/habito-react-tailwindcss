@@ -1,5 +1,5 @@
-import { ResponsiveLine } from '@nivo/line'
 import { useTranslation } from 'react-i18next'
+import { ResponsiveLine } from '@nivo/line'
 import useIsMobile from '../../../hooks/useIsMobile'
 import { useTheme } from '../../../context/ThemeContext'
 
@@ -31,7 +31,7 @@ const LineChartComponent = ({ goal }) => {
 	}
 
 	return (
-		<div style={{ height: 500 }} className='h-[500px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-4'>
+		<div style={{ height: 500 }} className='p-4 h-[500px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl'>
 			<ResponsiveLine
 				data={data}
 				animate={false}
@@ -61,7 +61,7 @@ const LineChartComponent = ({ goal }) => {
 				enableArea={!isMobile}
 				useMesh={true}
 				tooltip={({ point }) => (
-					<div className='p-2 bg-white dark:bg-gray-700 text-black dark:text-white rounded shadow text-sm font-medium space-y-1'>
+					<div className='p-2 text-sm font-medium text-black dark:text-white bg-white dark:bg-gray-700 rounded shadow space-y-1'>
 						<div>
 							<strong>{t('charts.date')}:</strong> {point.data.xFormatted}
 						</div>

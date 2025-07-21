@@ -20,6 +20,7 @@ import ThemeToggleButton from './ui/ThemeToggleButton'
 import logo from '../assets/logo.png'
 import '@theme-toggles/react/css/Classic.css'
 import { Classic } from '@theme-toggles/react'
+import clsx from 'clsx'
 
 const Header = () => {
 	const { pathname } = useLocation()
@@ -29,8 +30,8 @@ const Header = () => {
 	const linkClass = path =>
 		`px-3 py-2 rounded-lg transition ${
 			pathname === path
-				? 'bg-mainColor-600 text-white dark:bg-blue-600'
-				: 'text-mainColor-600 hover:bg-blue-100 dark:text-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-100'
+				? ' text-white bg-mainColor-600 dark:bg-blue-600'
+				: 'text-mainColor-600 dark:text-gray-200 hover:bg-blue-100 dark:hover:text-gray-100 dark:hover:bg-gray-700'
 		}`
 
 	// Mobile Menu
@@ -44,11 +45,10 @@ const Header = () => {
 		setIsMenuOpen(false)
 	}
 
-
 	const handleMenuClose = () => setIsMenuOpen(false)
 
 	return (
-		<header className='bg-white dark:bg-gray-900 shadow-md mb-4 sticky top-0 left-0 z-50'>
+		<header className='sticky top-0 left-0 mb-4 bg-white dark:bg-gray-900 shadow-md z-50'>
 			<AnimatePresence mode='wait' initial={false}>
 				<motion.div
 					key={i18n.language}
@@ -56,12 +56,8 @@ const Header = () => {
 					initial='initial'
 					animate='animate'
 					exit='exit'
-					className='max-w-4xl mx-auto px-4 py-3 flex justify-between items-center'>
-					<motion.div
-						variants={scaleInVariant}
-						initial='initial'
-						animate='animate'
-						>
+					className='flex justify-between items-center px-4 py-3 max-w-4xl mx-auto'>
+					<motion.div variants={scaleInVariant} initial='initial' animate='animate'>
 						<Link to='/' className='text-xl font-bold text-mainColor-600 hover:text-mainColor-500 transition-colors'>
 							<p>
 								<img src={logo} alt='' className='w-8 inline-block' /> Habito
@@ -97,14 +93,14 @@ const Header = () => {
 							onClick={() => setDarkMode(prev => !prev)}
 							toggled={!darkMode}
 							title={t(darkMode ? 'tooltip.switch_to_light' : 'tooltip.switch_to_dark')}
-							className='hidden md:block bg-blue-100  text-gray-700 hover:text-blue-500 dark:bg-blue-300 dark:text-yellow-700 dark:hover:bg-mainColor-500 dark:hover:text-yellow-500 px-4 py-2 rounded-lg text-2xl transition-colors'
+							className='hidden md:block px-4 py-2 text-2xl bg-blue-100  text-gray-700 hover:text-blue-500 dark:bg-blue-300 dark:text-yellow-700 dark:hover:bg-mainColor-500 dark:hover:text-yellow-500 rounded-lg transition-colors'
 						/>
 					</motion.nav>
 
 					{/* Hamburger Menu Button */}
 					<button
 						onClick={toggleMenu}
-						className='relative text-2xl p-2 md:hidden text-gray-700 hover:text-mainColor-600 dark:text-mainColor-600 dark:hover:text-mainColor-500 transition-colors overflow-hidden w-10 h-10 flex items-center justify-center'
+						className='relative flex items-center justify-center w-10 h-10 text-2xl p-2 md:hidden text-gray-700 hover:text-mainColor-600 dark:text-mainColor-600 dark:hover:text-mainColor-500 transition-colors overflow-hidden'
 						aria-label='Toggle menu'>
 						<AnimatePresence mode='wait'>
 							<motion.div
@@ -115,7 +111,7 @@ const Header = () => {
 								exit='exit'
 								transition={{ duration: 0.3 }}
 								className={`absolute ${isMenuOpen ? 'pointer-events-none' : ''}`}>
-								<FaBars className={`${isMenuOpen ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`} />
+								<FaBars className={clsx('transition-opacity duration-300', isMenuOpen ? 'opacity-0' : 'opacity-100')} />
 							</motion.div>
 						</AnimatePresence>
 					</button>
@@ -129,7 +125,9 @@ const Header = () => {
 								animate='animate'
 								exit='exit'
 								transition={{ type: 'tween', duration: 0.3 }}
-								className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out dark:bg-gray-900 `}>
+								className={clsx(
+									'fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out z-50'
+								)}>
 								<div className='flex justify-between items-center p-4 border-b dark:text-gray-200'>
 									<motion.span
 										variants={mobileMenuItem}
@@ -148,7 +146,13 @@ const Header = () => {
 										onClick={closeMenu}
 										className='text-2xl text-gray-700'
 										aria-label='Close menu'>
-										<FaTimes className='hover:text-mainColor-500 dark:text-mainColor-600 dark:hover:text-mainColor-500 transition-colors' />
+										<FaTimes
+											className={clsx(
+												'transition-colors',
+												'hover:text-mainColor-500',
+												'dark:text-mainColor-600 dark:hover:text-mainColor-500'
+											)}
+										/>
 									</motion.button>
 								</div>
 
@@ -156,8 +160,8 @@ const Header = () => {
 									variants={mobileMenuContainer}
 									initial='hidden'
 									animate='visible'
-									className='flex flex-col gap-6 p-6 text-gray-700 font-medium'>
-									{/* Linki */}
+									className='flex flex-col gap-6 p-6 font-medium text-gray-700'>
+									{/* Links */}
 									{[
 										{ to: '/', label: t('home') },
 										{ to: '/add', label: t('add_goal') },
@@ -172,11 +176,9 @@ const Header = () => {
 										</motion.div>
 									))}
 
-
 									<motion.div variants={mobileMenuItem}>
 										<LanguageSwitchButton className='w-full justify-center' />
 									</motion.div>
-
 
 									<motion.div variants={mobileMenuItem}>
 										<ThemeToggleButton className='w-full' />
