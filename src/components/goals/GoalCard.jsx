@@ -108,7 +108,7 @@ const GoalCard = ({
 
 			{/* MOBILE: toggle button */}
 			<div className='flex justify-end md:hidden'>
-				<button data-inside-goal='true' onClick={onToggleMobileExpand} className={toggleButtonClasses}>
+				<button data-inside-goal='true' data-testid='expand-mobile' onClick={onToggleMobileExpand} className={toggleButtonClasses}>
 					{t('see_more')}
 				</button>
 			</div>
@@ -134,6 +134,7 @@ const GoalCard = ({
 			<div className='hidden md:flex justify-end'>
 				<button
 					data-inside-goal='true'
+					data-testid='expand-desktop'
 					onClick={onToggleDesktopExpand}
 					className={toggleButtonClasses}
 				>

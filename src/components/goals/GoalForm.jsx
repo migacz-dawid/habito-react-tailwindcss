@@ -41,7 +41,7 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 		'w-full px-3 py-2 border rounded dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2'
 	const textareaClasses =
 		'w-full px-3 py-2 border rounded border-gray-300 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-mainColor-500'
-	const selectClasses ='dark:text-gray-400'
+	const selectClasses = 'dark:text-gray-400'
 	const errorTextClasses = 'mt-1 text-sm text-dangerColor-600'
 	const dayButtonBaseClasses = 'px-3 py-1 text-sm border rounded-full transition-colors'
 	const selectedDayClasses = 'text-white bg-mainColor-600 dark:text-gray-200 dark:border-gray-500'
@@ -98,8 +98,11 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 	return (
 		<form className={formContainerClasses}>
 			<div>
-				<label className={labelClasses}>{t('title')} *</label>
+				<label htmlFor='goal-title' className={labelClasses}>
+					{t('title')} *
+				</label>
 				<input
+					id='goal-title'
 					type='text'
 					value={title}
 					onChange={e => setTitle(e.target.value)}
@@ -115,8 +118,11 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 			</div>
 
 			<div>
-				<label className={labelClasses}>{t('description')}</label>
+				<label htmlFor='goal-description' className={labelClasses}>
+					{t('description')}
+				</label>
 				<textarea
+					id='goal-description'
 					value={description}
 					onChange={e => setDescription(e.target.value)}
 					rows='3'
@@ -126,9 +132,14 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 			</div>
 
 			<div>
-				<label className={labelClasses}>{t('category')}</label>
-				<select value={category} onChange={e => setCategory(e.target.value)} className={clsx(textareaClasses, selectClasses)}
-				>
+				<label htmlFor='goal-category' className={labelClasses}>
+					{t('category')}
+				</label>
+				<select
+					id='goal-category'
+					value={category}
+					onChange={e => setCategory(e.target.value)}
+					className={clsx(textareaClasses, selectClasses)}>
 					{categoryOptions.map(({ key, label }) => (
 						<option key={key} value={key}>
 							{label}
@@ -145,6 +156,7 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 				<div className='flex flex-wrap gap-3 py-2'>
 					<button
 						type='button'
+						data-testid={`day-daily`}
 						onClick={() => toggleDay(dailyKey)}
 						className={clsx(
 							dayButtonBaseClasses,
@@ -157,6 +169,7 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 						<button
 							key={key}
 							type='button'
+							data-testid={`day-${key}`}
 							onClick={() => toggleDay(key)}
 							className={clsx(
 								dayButtonBaseClasses,

@@ -2,7 +2,9 @@ import { useEffect } from 'react'
 import { useLocalStorage } from 'usehooks-ts'
 
 export const useToday = () => {
-  const [simulatedDate, setSimulatedDate] = useLocalStorage<string | null>('simulatedDate', null)
+    // TO ZMIENIONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  // const [simulatedDate, setSimulatedDate] = useLocalStorage<string | null>('simulatedDate', null)
+  const [simulatedDate, setSimulatedDate] = useLocalStorage('simulatedDate', null)
 
   useEffect(() => {
     if (!simulatedDate) {

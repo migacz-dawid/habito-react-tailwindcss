@@ -51,6 +51,7 @@ const Header = () => {
 		<header className='sticky top-0 left-0 mb-4 bg-white dark:bg-gray-900 shadow-md z-50'>
 			<AnimatePresence mode='wait' initial={false}>
 				<motion.div
+					data-testid='mobile-menu'
 					key={i18n.language}
 					variants={fadeDownVariant}
 					initial='initial'
@@ -58,9 +59,12 @@ const Header = () => {
 					exit='exit'
 					className='flex justify-between items-center px-4 py-3 max-w-4xl mx-auto'>
 					<motion.div variants={scaleInVariant} initial='initial' animate='animate'>
-						<Link to='/' className='text-xl font-bold text-mainColor-600 hover:text-mainColor-500 transition-colors'>
+						<Link
+							to='/'
+							data-testid='logo-link'
+							className='text-xl font-bold text-mainColor-600 hover:text-mainColor-500 transition-colors'>
 							<p>
-								<img src={logo} alt='' className='w-8 inline-block' /> Habito
+								<img src={logo} alt='Habito logo' className='w-8 inline-block' /> Habito
 							</p>
 						</Link>
 					</motion.div>
@@ -89,6 +93,7 @@ const Header = () => {
 						<LanguageSwitchButton />
 
 						<Classic
+							data-testid='desktop-theme-toggle'
 							duration={750}
 							onClick={() => setDarkMode(prev => !prev)}
 							toggled={!darkMode}
@@ -99,6 +104,7 @@ const Header = () => {
 
 					{/* Hamburger Menu Button */}
 					<button
+						data-testid='hamburger-button'
 						onClick={toggleMenu}
 						className='relative flex items-center justify-center w-10 h-10 text-2xl p-2 md:hidden text-gray-700 hover:text-mainColor-600 dark:text-mainColor-600 dark:hover:text-mainColor-500 transition-colors overflow-hidden'
 						aria-label='Toggle menu'>
@@ -120,6 +126,7 @@ const Header = () => {
 					<AnimatePresence onExitComplete={handleMenuClose}>
 						{isMenuOpen && (
 							<motion.div
+								data-testid='mobile-menu'
 								variants={mobileMenuSlide}
 								initial='initial'
 								animate='animate'
@@ -139,6 +146,7 @@ const Header = () => {
 									</motion.span>
 
 									<motion.button
+										data-testid='close-menu-button'
 										variants={closeButtonVariant}
 										initial='hidden'
 										animate='visible'
@@ -163,25 +171,29 @@ const Header = () => {
 									className='flex flex-col gap-6 p-6 font-medium text-gray-700'>
 									{/* Links */}
 									{[
-										{ to: '/', label: t('home') },
-										{ to: '/add', label: t('add_goal') },
-										{ to: '/stats', label: t('statistics') },
-										{ to: '/settings', label: t('settings') },
-										{ to: '/help', label: t('help.help') },
+										{ to: '/', label: t('home'), testid: 'mobile-link-home' },
+										{ to: '/add', label: t('add_goal'), testid: 'mobile-link-add' },
+										{ to: '/stats', label: t('statistics'), testid: 'mobile-link-stats' },
+										{ to: '/settings', label: t('settings'), testid: 'mobile-link-settings' },
+										{ to: '/help', label: t('help.help'), testid: 'mobile-link-help' },
 									].map(item => (
 										<motion.div key={item.to} variants={mobileMenuItem}>
-											<Link to={item.to} onClick={closeMenu} className='hover:text-mainColor-500 transition-colors'>
+											<Link
+												to={item.to}
+												onClick={closeMenu}
+												data-testid={item.testid}
+												className='hover:text-mainColor-500 transition-colors'>
 												{item.label}
 											</Link>
 										</motion.div>
 									))}
 
 									<motion.div variants={mobileMenuItem}>
-										<LanguageSwitchButton className='w-full justify-center' />
+										<LanguageSwitchButton data-testid='mobile-language-switch' className='w-full justify-center' />
 									</motion.div>
 
 									<motion.div variants={mobileMenuItem}>
-										<ThemeToggleButton className='w-full' />
+										<ThemeToggleButton data-testid='mobile-theme-toggle' className='w-full' />
 									</motion.div>
 								</motion.nav>
 							</motion.div>
@@ -192,6 +204,7 @@ const Header = () => {
 					<AnimatePresence>
 						{isMenuOpen && (
 							<motion.div
+								data-testid='mobile-overlay'
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 0.5 }}
 								exit={{ opacity: 0 }}
