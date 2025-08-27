@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import CompleteToggleButton from './CompleteToggleButton'
 import { vi } from 'vitest'
+import CompleteToggleButton from './CompleteToggleButton'
 
 describe('CompleteToggleButton', () => {
 	it('renders "mark done" state when not completed', () => {
@@ -31,7 +31,6 @@ describe('CompleteToggleButton', () => {
 	it('updates label after prop change (rerender)', () => {
 		const { rerender } = render(<CompleteToggleButton isCompletedToday={false} onToggle={vi.fn()} goalId='123' />)
 
-		// globalny mock i18n zwraca klucze
 		expect(screen.getByRole('button', { name: /mark_done/i })).toBeInTheDocument()
 
 		rerender(<CompleteToggleButton isCompletedToday={true} onToggle={vi.fn()} goalId='123' />)
@@ -42,12 +41,10 @@ describe('CompleteToggleButton', () => {
 	it('applies correct classes for completed vs not completed', () => {
 		const { rerender } = render(<CompleteToggleButton isCompletedToday={false} onToggle={vi.fn()} goalId='123' />)
 
-		// gdy NIE completed → zielone tło (success)
 		let btn = screen.getByRole('button', { name: /mark_done/i })
 		expect(btn.className).toMatch(/bg-successColor-600/)
 		expect(btn.className).not.toMatch(/bg-gray-300/)
 
-		// 
 		rerender(<CompleteToggleButton isCompletedToday={true} onToggle={vi.fn()} goalId='123' />)
 		btn = screen.getByRole('button', { name: /done/i })
 		expect(btn.className).toMatch(/bg-gray-300/)

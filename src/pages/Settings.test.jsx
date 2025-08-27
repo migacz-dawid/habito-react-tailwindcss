@@ -1,5 +1,4 @@
-// src/pages/Settings.test.jsx
-// @vitest-environment jsdom
+// Settings.test.jsx
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
@@ -15,16 +14,19 @@ vi.mock('../components/ui/ThemeToggleButton', () => ({
   __esModule: true,
   default: () => <div data-testid="ThemeToggleButton" />,
 }))
+
 vi.mock('../components/ui/LanguageSwitchButton', () => ({
   __esModule: true,
   default: () => <div data-testid="LanguageSwitchButton" />,
 }))
+
 vi.mock('../components/ui/ActionButton', () => ({
   __esModule: true,
   default: ({ text, onClick, className }) => (
     <button onClick={onClick} className={className}>{text}</button>
   ),
 }))
+
 vi.mock('../components/settings/SettingsSection', () => ({
   __esModule: true,
   default: ({ title, description, children }) => (
@@ -49,6 +51,7 @@ vi.mock('../components/modals/ConfirmModal', () => {
   )
   return { __esModule: true, default: ConfirmModalMock }
 })
+
 vi.mock('../components/modals/InfoModal', () => {
   const InfoModalMock = vi.fn(({ isOpen, messageKey, onClose }) =>
     isOpen ? (
@@ -152,7 +155,7 @@ describe('Settings page', () => {
         this.onload && this.onload({ target: { result: JSON.stringify(imported) } })
       }
     }
-    // @ts-ignore
+    
     globalThis.FileReader = FileReaderMock
 
     const { container } = render(<MemoryRouter><Settings /></MemoryRouter>)

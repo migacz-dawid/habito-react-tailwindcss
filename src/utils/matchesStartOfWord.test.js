@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { matchesStartOfWord } from './matchesStartOfWord' // adjust path if needed
+import { matchesStartOfWord } from './matchesStartOfWord' 
 
 describe('matchesStartOfWord', () => {
   it('returns true when search matches characters in order from the start of words', () => {

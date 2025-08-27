@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { vi } from 'vitest'
 import { LanguageProvider, LanguageContext } from './LanguageContext'
 
-// Mock i18n (nie react-i18next, bo LanguageContext korzysta z i18n bezpośrednio)
+// Mock i18n (not react-i18next, because LanguageContext uses i18n directly)
 vi.mock('../i18n/i18n', () => ({
   default: {
     changeLanguage: vi.fn(),
@@ -12,7 +12,7 @@ vi.mock('../i18n/i18n', () => ({
 
 import i18n from '../i18n/i18n'
 
-// Prosty komponent do pobierania wartości z kontekstu
+// A simple component for retrieving values ​​from context
 function TestConsumer() {
   const { language, changeLanguage } = React.useContext(LanguageContext)
   return (

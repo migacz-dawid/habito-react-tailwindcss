@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import ExportCSVButton from './ExportCSVButton'
 import { vi } from 'vitest'
+import ExportCSVButton from './ExportCSVButton'
 
-// Zachowaj oryginał
+// keep original
 const originalCreateElement = document.createElement
 
 // Mock createObjectURL
@@ -53,7 +53,7 @@ describe('ExportCSVButton', () => {
 			],
 		}
 
-		// Poprawione mockowanie <a> bez rekurencji
+		// Fixed <a> mocking without recursion
 		vi.spyOn(document, 'createElement').mockImplementation(tagName => {
 			if (tagName === 'a') {
 				const link = originalCreateElement.call(document, 'a')

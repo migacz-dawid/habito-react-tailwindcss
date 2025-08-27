@@ -197,6 +197,6 @@ describe('DateRangeSelector', () => {
 		await user.selectOptions(fromSelect, '2024-02')
 
 		expect(setStartDate).toHaveBeenCalledWith('2024-02')
-		expect(setEndDate).not.toHaveBeenCalledWith('2024-02') // brak synchronizacji
+		expect(setEndDate).not.toHaveBeenCalledWith('2024-02') 
 	})
 })

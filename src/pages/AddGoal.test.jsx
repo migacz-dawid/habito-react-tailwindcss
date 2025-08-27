@@ -1,5 +1,4 @@
-// src/pages/AddGoal.test.jsx
-// @vitest-environment jsdom
+// AddGoal.test.jsx
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 

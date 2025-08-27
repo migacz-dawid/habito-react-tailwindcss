@@ -1,29 +1,21 @@
 // BarChartComponent.test.jsx
 import { render, screen } from '@testing-library/react'
 import { vi } from 'vitest'
-// --- Mocks MUST come before importing the component ---
 
-// mock ThemeContext: expose a mockable function
+// --- Mocks (must be defined before importing the component) ---
 vi.mock('../../../context/ThemeContext', () => ({
-	useTheme: vi.fn(() => ({ darkMode: false })), // <-- vi.fn, żeby móc mockReturnValueOnce
+	useTheme: vi.fn(() => ({ darkMode: false })), 
 }))
 
-// mock i18n -> t(key)
 vi.mock('react-i18next', () => ({
 	useTranslation: () => ({
 		t: k => ({ 'charts.date': 'Date' }[k] ?? k),
 	}),
 }))
 
-// mock hooka isMobile (
 vi.mock('../../../hooks/useIsMobile', () => ({
-	default: vi.fn(() => false), // domyślnie desktop
+	default: vi.fn(() => false), 
 }))
-
-// mock Nivo
-// vi.mock('@nivo/bar', () => ({
-//   ResponsiveBar: () => <div data-testid="nivo-bar-chart" />,
-// }))
 
 vi.mock('@nivo/bar', () => {
 	let __lastBarProps = null
@@ -87,13 +79,12 @@ describe('BarChartComponent', () => {
 		const props = __getLastBarProps()
 		expect(props).toBeTruthy()
 
-		// kontrakt
 		expect(props.enableLabel).toBe(true)
 		expect(props.margin).toEqual({ top: 50, right: 50, bottom: 100, left: 60 })
 		expect(props.animate).toBe(false)
 		expect(props.padding).toBe(0.3)
 
-		// oś Y (widoczna)
+		// Axis Y 
 		expect(props.axisLeft).toEqual(
 			expect.objectContaining({
 				legend: 'Streak',
@@ -102,11 +93,11 @@ describe('BarChartComponent', () => {
 			})
 		)
 
-		// oś X (desktop)
+		// Axis X (desktop)
 		expect(props.axisBottom).toEqual(
 			expect.objectContaining({
 				tickRotation: -45,
-				legend: 'Date', // t('charts.date') -> 'Date' z mocka i18n
+				legend: 'Date', // t('charts.date') -> 'Date' from mock i18n
 				legendPosition: 'middle',
 				legendOffset: 80,
 				tickPadding: 10,

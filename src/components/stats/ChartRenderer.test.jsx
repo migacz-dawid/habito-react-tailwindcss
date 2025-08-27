@@ -4,7 +4,7 @@ import HeatMapChart from './charts/HeatMapChart'
 import BarChartComponent from './charts/BarChartComponent'
 import LineChartComponent from './charts/LineChartComponent'
 
-// Mock wykresów
+// Charts are mocked
 vi.mock('./charts/HeatMapChart', () => {
 	const HeatMapMock = vi.fn(({ goal }) => <div data-testid='heatmap-chart'>{goal?.name}</div>)
 	return { default: HeatMapMock }
@@ -82,11 +82,11 @@ describe('ChartRenderer', () => {
 		rerender(<ChartRenderer {...baseProps} type='Heatmap' startDate='2024-02-01' />)
 		const secondNode = screen.getByTestId('heatmap-chart') // DOM node nr 2
 
-		// drugi węzeł powinien być innym elementem (pierwszy został odmontowany)
+		// the second node should be a different element (the first one was unmounted)
 		expect(firstNode).not.toBe(secondNode)
-		// i pierwszy nie powinien już być w DOM
+		// and the first one should no longer be in DOM
 		expect(firstNode).not.toBeInTheDocument()
-		// dodatkowo mock został wywołany ponownie (nowy mount)
+		// additionally, mock was called again (new mount)
 		expect(HeatMapChart).toHaveBeenCalledTimes(2)
 	})
 })

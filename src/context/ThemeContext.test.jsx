@@ -1,7 +1,7 @@
 // ThemeContext.test.jsx
 vi.mock('./context/ThemeContext', async (importOriginal) => {
   const actual = await importOriginal()
-  return { ...actual } // zero nadpisań = realny moduł
+  return { ...actual } // zero changes to the original
 })
 
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'

@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom'
-import { vi } from 'vitest'
+import { vi, afterEach } from 'vitest'
+import { cleanup } from '@testing-library/react'
 
 vi.mock('react-i18next', async () => {
 	const actual = await vi.importActual('react-i18next')
@@ -14,5 +15,11 @@ vi.mock('react-i18next', async () => {
 			init: vi.fn(),
 		},
 	}
+})
+
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+  vi.useRealTimers()
 })
 

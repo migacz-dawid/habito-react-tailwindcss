@@ -46,7 +46,6 @@ describe('getCategoryOptions', () => {
 
 		const res = getCategoryOptions(t, true)
 
-		// powinniśmy dostać strukturę, ale label może być undefined
 		expect(res).toHaveLength(6)
 		res.forEach(item => {
 			expect(item).toHaveProperty('key')

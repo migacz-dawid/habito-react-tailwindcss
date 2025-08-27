@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import TopBar from './TopBar'
 import { vi } from 'vitest'
+import TopBar from './TopBar'
 
 describe('TopBar', () => {
 	it('renders today info with date and weekday', () => {
@@ -31,7 +31,7 @@ describe('TopBar', () => {
 	it('updates displayed date and weekday after prop change (rerender)', () => {
 		const { rerender } = render(<TopBar simulatedDate='2025-07-23' weekDay='Wednesday' onEndDay={vi.fn()} />)
 
-		// pełna linia: "today: 2025-07-23 (Wednesday)"
+		// all lines: "today: 2025-07-23 (Wednesday)"
 		expect(screen.getByText(/today:\s*2025-07-23\s*\(Wednesday\)/i)).toBeInTheDocument()
 
 		rerender(<TopBar simulatedDate='2025-07-24' weekDay='Thursday' onEndDay={vi.fn()} />)
@@ -44,9 +44,9 @@ describe('TopBar', () => {
 		render(<TopBar simulatedDate='2025-07-23' weekDay='Wednesday' onEndDay={vi.fn()} />)
 
 		const btn = screen.getByRole('button', { name: /end_day/i })
-		expect(btn.className).toMatch(/bg-green-600/) // !bg-green-600 też będzie w className
+		expect(btn.className).toMatch(/bg-green-600/) // !bg-green-600 also is in className
 		expect(btn.className).toMatch(/hover:!bg-green-700/)
-		expect(btn.className).toMatch(/rounded/) // !rounded jest przekazane w klasach
+		expect(btn.className).toMatch(/rounded/) // !rounded is in class 
 	})
 
 	it('calls onEndDay on keyboard activation (Space/Enter)', async () => {

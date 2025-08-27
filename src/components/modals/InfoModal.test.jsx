@@ -34,7 +34,7 @@ describe('InfoModal', () => {
 
 	it('unmounts content when isOpen becomes false (rerender)', async () => {
 		const { rerender } = render(<InfoModal isOpen={true} onClose={() => {}} />)
-		const heading = screen.getByRole('heading') // np. "info"
+		const heading = screen.getByRole('heading') 
 
 		rerender(<InfoModal isOpen={false} onClose={() => {}} />)
 		await waitForElementToBeRemoved(heading)

@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import { vi } from 'vitest'
 import EmptyState from './EmptyState'
+import { vi } from 'vitest'
 
 describe('EmptyState', () => {
   it('should render the provided message', () => {

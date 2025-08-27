@@ -93,7 +93,7 @@ describe('GoalStats', () => {
 		render(<GoalStats goal={goal} />)
 
 		// avg_streak -> '–'
-		expect(screen.getAllByText('–')).toHaveLength(1) // tylko średnia jest '–' w tym scenariuszu
+		expect(screen.getAllByText('–')).toHaveLength(1) 
 
 		// success_rate -> 0.0%
 		expect(screen.getByText('0.0%')).toBeInTheDocument()

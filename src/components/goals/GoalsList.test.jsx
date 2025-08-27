@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import GoalsList from './GoalsList'
 import { vi } from 'vitest'
+import GoalsList from './GoalsList'
 
 import GoalCardMock from './GoalCard'
 
@@ -43,12 +43,10 @@ describe('GoalsList', () => {
 	it('passes correct expansion flags to GoalCard', () => {
 		render(<GoalsList goals={mockGoals} {...commonProps} expandedMobileId='2' expandedDesktopId='1' />)
 
-		// propsy pierwszego GoalCard (goal id = "1")
 		const firstProps = GoalCardMock.mock.calls[0][0]
-		expect(firstProps.isExpandedMobile).toBe(false) // mobile expanded jest "2"
-		expect(firstProps.isExpandedDesktop).toBe(true) // desktop expanded jest "1"
+		expect(firstProps.isExpandedMobile).toBe(false) // mobile expanded is "2"
+		expect(firstProps.isExpandedDesktop).toBe(true) // desktop expanded is "1"
 
-		// propsy drugiego GoalCard (goal id = "2")
 		const secondProps = GoalCardMock.mock.calls[1][0]
 		expect(secondProps.isExpandedMobile).toBe(true)
 		expect(secondProps.isExpandedDesktop).toBe(false)

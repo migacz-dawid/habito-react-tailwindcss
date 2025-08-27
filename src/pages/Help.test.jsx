@@ -1,5 +1,4 @@
-// src/pages/Help.test.jsx
-// @vitest-environment jsdom
+// Help.test.jsx
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 
@@ -132,5 +131,5 @@ describe('Help page', () => {
     expect(repo).toHaveAttribute('target', '_blank')
     expect(repo).toHaveAttribute('rel', expect.stringContaining('noopener'))
     expect(repo).toHaveAttribute('rel', expect.stringContaining('noreferrer'))
-  })
+  }) 
 })

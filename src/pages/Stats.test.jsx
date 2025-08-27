@@ -1,5 +1,4 @@
-// src/pages/Stats.test.jsx
-// @vitest-environment jsdom
+// Stats.test.jsx
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'

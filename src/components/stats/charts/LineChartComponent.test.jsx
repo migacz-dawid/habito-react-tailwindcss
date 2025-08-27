@@ -1,7 +1,6 @@
 // LineChartComponent.test.jsx
-import { vi } from 'vitest'
-import React from 'react'
 import { render, screen } from '@testing-library/react'
+import { vi } from 'vitest'
 
 // --- Mocks MUST come before importing the component ---
 
@@ -22,7 +21,6 @@ vi.mock('../../../hooks/useIsMobile', () => ({
 	default: vi.fn(() => false), // default: desktop
 }))
 
-// mock Nivo
 // mock Nivo
 vi.mock('@nivo/line', () => {
 	let __lastLineProps = null
@@ -92,7 +90,6 @@ describe('LineChartComponent', () => {
 		const props = __getLastLineProps()
 		expect(props).toBeTruthy()
 
-		// kontrakt ogólny
 		expect(props.animate).toBe(false)
 		expect(props.margin).toEqual({ top: 50, right: 50, bottom: 100, left: 60 })
 		expect(props.xScale).toEqual({ type: 'point' })
@@ -102,7 +99,6 @@ describe('LineChartComponent', () => {
 		expect(props.useMesh).toBe(true)
 		expect(props.colors).toEqual(['#2563eb']) // light mode
 
-		// dane
 		expect(props.data).toHaveLength(1)
 		expect(props.data[0].id).toBe('Test Goal')
 		expect(props.data[0].data).toEqual([
@@ -110,7 +106,7 @@ describe('LineChartComponent', () => {
 			{ x: '2024-01-02', y: 5 },
 		])
 
-		// oś Y (zawsze włączona)
+		// Axis Y (allways left)
 		expect(props.axisLeft).toEqual(
 			expect.objectContaining({
 				orient: 'left',
@@ -120,7 +116,7 @@ describe('LineChartComponent', () => {
 			})
 		)
 
-		// oś X (desktop)
+		// Axis X (desktop)
 		expect(props.axisBottom).toEqual(
 			expect.objectContaining({
 				orient: 'bottom',

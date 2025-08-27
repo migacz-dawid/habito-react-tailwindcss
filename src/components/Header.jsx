@@ -168,7 +168,7 @@ const Header = () => {
 									variants={mobileMenuContainer}
 									initial='hidden'
 									animate='visible'
-									className='flex flex-col gap-6 p-6 font-medium text-gray-700'>
+									className='flex flex-col gap-6 p-6 font-medium text-gray-700 dark:text-blue-700'>
 									{/* Links */}
 									{[
 										{ to: '/', label: t('home'), testid: 'mobile-link-home' },

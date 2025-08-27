@@ -83,7 +83,7 @@ describe('ChartFilters', () => {
 			/>
 		)
 		const options = screen.getAllByRole('option')
-		expect(options[0]).toHaveTextContent(/^select$/i) // t('select') -> 'select' (globalny mock)
+		expect(options[0]).toHaveTextContent(/^select$/i) // t('select') -> 'select' (global mock)
 	})
 
 	it('lists active goals first and appends "(archive)" to archived ones', () => {
@@ -113,7 +113,7 @@ describe('ChartFilters', () => {
 			/>
 		)
 		const options = screen.getAllByRole('option')
-		// opcja dla Goal 2
+		// option for Goal 2
 		expect(options[2].className).toMatch(/text-gray-400/)
 	})
 })

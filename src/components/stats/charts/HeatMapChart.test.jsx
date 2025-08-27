@@ -1,6 +1,6 @@
 // HeatMapChart.test.jsx
-import { vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
+import { vi } from 'vitest'
 
 // --- Mocks (must be defined before importing the component) ---
 vi.mock('../../../context/ThemeContext', () => ({
@@ -94,24 +94,24 @@ describe('HeatMapChart', () => {
 	})
 
 	it('passes correct props to ResponsiveCalendar on desktop (from/to, colors, borders, margins)', () => {
-		// desktop jest domyślny
+		// desktop mode (default)
 		render(<HeatMapChart goal={mockGoal} />)
 
 		const props = __getLastCalendarProps()
 		expect(props).toBeTruthy()
 
-		// dane zmapowane
+		// data mapping
 		expect(props.data).toEqual([
 			{ day: '2025-06-01', value: 1 },
 			{ day: '2025-06-02', value: 2 },
 			{ day: '2025-06-03', value: 3 },
 		])
 
-		// zakres pełny: od pierwszej do ostatniej daty
+		// full range: from first to last date
 		expect(props.from).toBe('2025-06-01')
 		expect(props.to).toBe('2025-06-03')
 
-		// stałe wizualne (light mode)
+		// visual constants (light mode)
 		expect(props.colors).toEqual(['#2563eb', '#3b82f6', '#facc15', '#f97316', '#ef4444'])
 		expect(props.emptyColor).toBe('#eeeeee')
 		expect(props.dayBorderColor).toBe('#ffffff')
@@ -133,24 +133,20 @@ describe('HeatMapChart', () => {
 		const props = __getLastTimeRangeProps()
 		expect(props).toBeTruthy()
 
-		// zakres z miesiąca pierwszej daty (2025-06)
-		// expect(props.from).toBe('2025-06-01')
-		// expect(props.to).toBe('2025-06-30')
-
-		// dane powinny być przefiltrowane do tego miesiąca (tu i tak wszystkie mieszczą się w czerwcu)
+		// data mapping
 		expect(props.data).toEqual([
 			{ day: '2025-06-01', value: 1 },
 			{ day: '2025-06-02', value: 2 },
 			{ day: '2025-06-03', value: 3 },
 		])
 
-		// stałe wizualne (light mode)
+		// visual constants (light mode)
 		expect(props.colors).toEqual(['#2563eb', '#3b82f6', '#facc15', '#f97316', '#ef4444'])
 		expect(props.emptyColor).toBe('#eeeeee')
 		expect(props.dayBorderColor).toBe('#ffffff')
 		expect(props.monthBorderColor).toBe('#ffffff')
 
-		// layout i osie
+		// layout and axes
 		expect(props.margin).toEqual({ top: 30, right: 30, bottom: 30, left: 30 })
 		expect(props.firstWeekday).toBe('monday')
 		expect(props.weekdayTicks).toEqual([0, 1, 2, 3, 4, 5, 6])
@@ -159,7 +155,7 @@ describe('HeatMapChart', () => {
 		expect(props.minValue).toBe('auto')
 		expect(props.maxValue).toBe('auto')
 
-		// animacje
+		// animation
 		expect(props.animate).toBe(false)
 	})
 
@@ -168,8 +164,8 @@ describe('HeatMapChart', () => {
 
 		const spanningGoal = {
 			history: [
-				{ date: '2025-04-15', streakAtThatDay: 1 }, // pierwszy wpis -> kwiecień
-				{ date: '2025-05-02', streakAtThatDay: 2 }, // inny miesiąc
+				{ date: '2025-04-15', streakAtThatDay: 1 }, // first entry -> April
+				{ date: '2025-05-02', streakAtThatDay: 2 }, // another month
 			],
 		}
 
@@ -177,11 +173,6 @@ describe('HeatMapChart', () => {
 
 		const props = __getLastTimeRangeProps()
 
-		// zakres powinien być z kwietnia 2025 (01..30)
-		// expect(props.from).toBe('2025-04-01')
-		// expect(props.to).toBe('2025-04-30')
-
-		// dane przefiltrowane tylko do kwietnia
 		expect(props.data).toEqual([{ day: '2025-04-15', value: 1 }])
 	})
 

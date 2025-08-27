@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import ArchiveToggleButton from './ArchiveToggleButton'
 import { vi } from 'vitest'
+import ArchiveToggleButton from './ArchiveToggleButton'
 
 describe('ArchiveToggleButton', () => {
 	it('renders archive state when not archived', () => {
@@ -30,7 +30,6 @@ describe('ArchiveToggleButton', () => {
 
 	it('updates label after prop change (rerender)', () => {
 		const { rerender } = render(<ArchiveToggleButton isArchived={false} onToggle={vi.fn()} goalId='123' />)
-		// globalny mock i18n zwraca klucze
 		expect(screen.getByRole('button', { name: /archive_goal/i })).toBeInTheDocument()
 
 		rerender(<ArchiveToggleButton isArchived={true} onToggle={vi.fn()} goalId='123' />)

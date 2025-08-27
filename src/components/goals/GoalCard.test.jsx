@@ -43,7 +43,7 @@ describe('GoalCard', () => {
 	it('renders goal title and category', () => {
 		renderGoalCard()
 		expect(screen.getByText('Test Goal')).toBeInTheDocument()
-		expect(screen.getByText(/categories.health/i)).toBeInTheDocument() // tłumaczenie
+		expect(screen.getByText(/categories.health/i)).toBeInTheDocument() 
 	})
 
 	it('calls onToggleDesktopExpand when desktop see_more button is clicked', async () => {
@@ -76,7 +76,7 @@ describe('GoalCard', () => {
 	it('calls onDelete when delete button is clicked', async () => {
 		const onDelete = vi.fn()
 		const user = userEvent.setup()
-		renderGoalCard({ onDelete, isExpandedDesktop: true }) // musi być rozwinięty
+		renderGoalCard({ onDelete, isExpandedDesktop: true })
 
 		const deleteBtn = screen.getByRole('button', { name: /delete/i })
 		await user.click(deleteBtn)
@@ -109,7 +109,6 @@ describe('GoalCard', () => {
 
 	it('applies archived card classes when goal is archived', () => {
 		const { container } = renderGoalCard({ goal: { ...mockGoal, isArchived: true } })
-		// główny wrapper to motion.div; łapiemy pierwszy element z klasami karty
 		const card = container.querySelector('[data-inside-goal="true"]')
 		expect(card.className).toMatch(/bg-gray-100/)
 		expect(card.className).toMatch(/text-gray-400/)
@@ -117,7 +116,6 @@ describe('GoalCard', () => {
 
 	it('renders weekdays list when not daily', () => {
 		renderGoalCard({ goal: { ...mockGoal, frequency: ['mon', 'wed'] } })
-		// przy globalnym mocku t(key) -> key:
 		expect(screen.getByText(/weekdays\.mon,\s*weekdays\.wed/i)).toBeInTheDocument()
 	})
 

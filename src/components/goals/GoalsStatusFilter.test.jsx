@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import GoalsStatusFilter from './GoalsStatusFilter'
 import { vi } from 'vitest'
+import GoalsStatusFilter from './GoalsStatusFilter'
 
 describe('GoalsStatusFilter', () => {
-	const t = key => key // mock tłumaczenia
+	const t = key => key 
 
 	it('renders all filter buttons with correct labels', () => {
 		render(<GoalsStatusFilter filter='AllTask' setFilter={vi.fn()} t={t} />)

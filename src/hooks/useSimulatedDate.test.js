@@ -1,5 +1,6 @@
+// useSimulatedDate.test.jsx
 import { renderHook, act } from '@testing-library/react'
-import { vi } from 'vitest'
+import { vi, beforeEach, afterEach } from 'vitest'
 
 // mock usehooks-ts BEFORE importing the hook
 const setMock = vi.fn()
@@ -11,19 +12,16 @@ import { useLocalStorage } from 'usehooks-ts'
 import useSimulatedDate from './useSimulatedDate'
 
 describe('useSimulatedDate', () => {
-	const TODAY = '2025-08-08' // fixed "today" for deterministic tests
-
-	beforeAll(() => {
-		vi.useFakeTimers()
-		vi.setSystemTime(new Date(`${TODAY}T12:00:00Z`))
-	})
-
-	afterAll(() => {
-		vi.useRealTimers()
-	})
+	const TODAY = '2025-08-08'	// fixed "today" for deterministic tests
 
 	beforeEach(() => {
+		vi.useFakeTimers()
+		vi.setSystemTime(new Date(`${TODAY}T12:00:00Z`))
 		vi.clearAllMocks()
+	})
+
+	afterEach(() => {
+		vi.useRealTimers()
 	})
 
 	it('initializes with today when local storage is null', () => {
@@ -61,7 +59,7 @@ describe('useSimulatedDate', () => {
 
 	it('uses custom today fallback if local storage stays null across renders', () => {
 		// still null -> hook should still return TODAY as value (nullish coalescing)
-		useLocalStorage.mockReturnValueOnce([null, setMock])
+		useLocalStorage.mockReturnValue([null, setMock])
 
 		const { result, rerender } = renderHook(() => useSimulatedDate())
 

@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import ActionButton from './ActionButton'
 import { vi } from 'vitest'
+import ActionButton from './ActionButton'
 
-// Mock stylów wariantów przycisku
+// Button Variants Style mock
 vi.mock('../../styles/buttonVariants', () => ({
   VARIANT_CLASSES: {
     primary: 'bg-blue-500',

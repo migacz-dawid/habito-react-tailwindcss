@@ -42,10 +42,10 @@ describe('ConfirmModal', () => {
 
 	it('unmounts content when isOpen becomes false (rerender)', async () => {
 		const { rerender } = render(<ConfirmModal isOpen={true} onConfirm={() => {}} onCancel={() => {}} />)
-		const heading = screen.getByRole('heading') // np. "confirm"
+		const heading = screen.getByRole('heading') 
 
 		rerender(<ConfirmModal isOpen={false} onConfirm={() => {}} onCancel={() => {}} />)
-		await waitForElementToBeRemoved(heading) // czeka aż AnimatePresence usunie element po exit
+		await waitForElementToBeRemoved(heading) 
 	})
 
 	it('triggers onConfirm via keyboard (Space/Enter)', async () => {

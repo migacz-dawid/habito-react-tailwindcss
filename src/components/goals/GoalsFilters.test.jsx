@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import GoalsFilters from './GoalsFilters'
 import { vi } from 'vitest'
+import GoalsFilters from './GoalsFilters'
 
 describe('GoalsFilters', () => {
 	const mockT = key => key

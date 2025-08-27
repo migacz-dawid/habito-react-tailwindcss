@@ -26,5 +26,5 @@ describe('About page', () => {
     expect(screen.getByText('about.paragraph_1')).toBeInTheDocument()
     expect(screen.getByText('about.paragraph_5')).toBeInTheDocument()
     expect(screen.getByText('help.repo_title')).toBeInTheDocument()
-  })
+  }) 
 })

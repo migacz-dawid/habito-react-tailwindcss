@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import GoalsTabSelector from './GoalsTabSelector'
 import { vi } from 'vitest'
+import GoalsTabSelector from './GoalsTabSelector'
 
 describe('GoalsTabSelector', () => {
 	const t = key => key
@@ -44,13 +44,13 @@ describe('GoalsTabSelector', () => {
 		const activeBtn = screen.getByRole('button', { name: /active/i })
 		const archivedBtn = screen.getByRole('button', { name: /archive/i })
 
-		// start: active -> szary (active classes), archive -> fiolet (inactive classes)
+		// start: active -> grey (active classes), archive -> violet (inactive classes)
 		expect(activeBtn).toHaveClass('bg-gray-200')
 		expect(archivedBtn).toHaveClass('bg-mainColor-600')
 
 		rerender(<GoalsTabSelector tab='archived' setTab={vi.fn()} activeCount={3} archivedCount={2} t={k => k} />)
 
-		// po zmianie: archive -> szary, active -> fiolet
+		// after change: archive -> grey, active -> violet
 		expect(screen.getByRole('button', { name: /archive/i })).toHaveClass('bg-gray-200')
 		expect(screen.getByRole('button', { name: /active/i })).toHaveClass('bg-mainColor-600')
 	})

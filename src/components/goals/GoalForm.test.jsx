@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { vi } from 'vitest'
 import GoalForm from './GoalForm'
 import { I18nextProvider } from 'react-i18next'
-import i18n from '../../i18n/i18n' // podmień ścieżkę, jeśli inna
+import i18n from '../../i18n/i18n'
 
 const renderForm = (props = {}) => {
 	const onSubmit = vi.fn()
@@ -68,7 +68,7 @@ describe('GoalForm', () => {
 		expect(onCancel).toHaveBeenCalled()
 	})
 
-	//REGUŁY DOMENOWE FORMULARZ - POKAZUJE ŻE.....
+	// Form domein rules 
 
 	it('collapses all weekdays into ["daily"] on submit when all are selected', async () => {
 		const { onSubmit } = renderForm()
@@ -76,7 +76,6 @@ describe('GoalForm', () => {
 
 		await user.type(screen.getByLabelText(/title/i), 'My Goal')
 
-		// wybierz wszystkie 7 dni roboczych
 		const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 		for (const d of days) {
 			await user.click(screen.getByTestId(`day-${d}`))

@@ -1,5 +1,4 @@
-// src/pages/EditGoal.test.jsx
-// @vitest-environment jsdom
+// EditGoal.test.jsx
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
@@ -15,7 +14,7 @@ const hoisted = vi.hoisted(() => ({
 
 // ---- Mocks (defined BEFORE importing SUT) ----
 
-// Mock GoalForm — zero zewnętrznych zmiennych; używa hoisted.updatedData
+// Mock GoalForm — no external vars; uses hoisted.updatedData
 vi.mock('../components/goals/GoalForm', () => {
 	const GoalFormMock = vi.fn(({ onSubmit, onCancel }) => (
 		<div>
@@ -27,7 +26,7 @@ vi.mock('../components/goals/GoalForm', () => {
 	return { __esModule: true, default: GoalFormMock }
 })
 
-// react-router-dom: kontrolujemy params.id i navigate
+// react-router-dom: controling params.id and navigate
 let navigateMock
 let currentParamsId
 vi.mock('react-router-dom', async orig => {
@@ -39,14 +38,14 @@ vi.mock('react-router-dom', async orig => {
 	}
 })
 
-// usehooks-ts: kontrolujemy storage
+// usehooks-ts: controlling storage
 let mockGoals
 let setGoalsMock
 vi.mock('usehooks-ts', () => ({
 	useLocalStorage: () => [mockGoals, setGoalsMock],
 }))
 
-// ---- Import SUT & mocków po zdefiniowaniu vi.mock ----
+// Import SUT before mocks
 import EditGoal from './EditGoal'
 import GoalFormMock from '../components/goals/GoalForm'
 
@@ -54,7 +53,7 @@ describe('EditGoal page', () => {
 	beforeEach(() => {
 		navigateMock = vi.fn()
 		setGoalsMock = vi.fn()
-		// Dwa cele, edytujemy g-1 domyślnie
+		// Two Goals, defoult edit g-1
 		mockGoals = [
 			{
 				id: 'g-1',
@@ -88,13 +87,13 @@ describe('EditGoal page', () => {
 	it('renders heading and passes initialValues to GoalForm', async () => {
 		render(<EditGoal />)
 
-		// initialValues ustawiane w useEffect → używamy findBy...
+		// initialValues is set in useEffect → use findBy...
 		expect(await screen.findByRole('heading', { level: 1, name: 'edit_goal' })).toBeInTheDocument()
 		expect(screen.getByText('MockGoalForm')).toBeInTheDocument()
 
 		const props = GoalFormMock.mock.calls[0][0]
 		expect(props.mode).toBe('edit')
-		expect(props.initialValues).toEqual(mockGoals[0]) // przekazuje znaleziony goal
+		expect(props.initialValues).toEqual(mockGoals[0]) 
 		expect(typeof props.onSubmit).toBe('function')
 		expect(typeof props.onCancel).toBe('function')
 	})
@@ -103,7 +102,7 @@ describe('EditGoal page', () => {
 		const user = userEvent.setup()
 		render(<EditGoal />)
 
-		// Poczekaj aż strona się w pełni zrenderuje (useEffect)
+		// Wait for the page to fully render (useEffect)
 		await screen.findByRole('heading', { level: 1, name: 'edit_goal' })
 
 		await user.click(screen.getByRole('button', { name: /submit/i }))
@@ -111,19 +110,19 @@ describe('EditGoal page', () => {
 		expect(setGoalsMock).toHaveBeenCalledTimes(1)
 		const updatedArr = setGoalsMock.mock.calls[0][0]
 
-		// Tablica ma ten sam rozmiar
+		// Array have not changed
 		expect(updatedArr).toHaveLength(mockGoals.length)
 
-		// g-1 został zmergowany z updatedData
+		// g-1 was merged with updatedData
 		const updatedG1 = updatedArr.find(g => g.id === 'g-1')
 		expect(updatedG1).toMatchObject({
 			id: 'g-1',
-			// nadpisane pola:
+			// modified fields:
 			title: hoisted.updatedData.title,
 			description: hoisted.updatedData.description,
 			category: hoisted.updatedData.category,
 			frequency: hoisted.updatedData.frequency,
-			// zachowane pola:
+			// unchanged fields:
 			completedDates: [],
 			completedTask: false,
 			streakCount: 0,
@@ -131,11 +130,11 @@ describe('EditGoal page', () => {
 			isArchived: false,
 		})
 
-		// g-2 pozostał bez zmian
+		// g-2 was not modified
 		const untouchedG2 = updatedArr.find(g => g.id === 'g-2')
 		expect(untouchedG2).toEqual(mockGoals[1])
 
-		// redirect na "/"
+		// redirect to "/"
 		expect(navigateMock).toHaveBeenCalledWith('/')
 	})
 

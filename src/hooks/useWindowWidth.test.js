@@ -1,4 +1,3 @@
-// useWindowWidth.test.jsx
 import { renderHook, act } from '@testing-library/react'
 import { vi } from 'vitest'
 import useWindowWidth from './useWindowWidth'
@@ -59,7 +58,7 @@ describe('useWindowWidth', () => {
     expect(removeSpy).toHaveBeenCalledWith('resize', handler)
   })
 
-    it('handles multiple rapid resize events without leaking listeners', () => {
+  it('handles multiple rapid resize events without leaking listeners', () => {
     const addSpy = vi.spyOn(window, 'addEventListener')
     const removeSpy = vi.spyOn(window, 'removeEventListener')
 
