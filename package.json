@@ -5,11 +5,18 @@
 	"type": "module",
 	"homepage": "https://migacz-dawid.github.io/habito-react-tailwindcss",
 	"scripts": {
-		"dev": "vite",
+		"dev": "vite --port 5173 --strictPort",
 		"build": "vite build",
 		"lint": "eslint .",
-		"preview": "vite preview",
-		"test": "vitest --config vitest.config.js"
+		"postinstall": "playwright install",
+		"preview": "vite preview --port 5173 --strictPort",
+		"test": "vitest --config vitest.config.js",
+		"test:e2e": "playwright test --project=e2e",
+		"test:e2e:ui": "playwright test --project=e2e --ui",
+		"test:e2e:headed": "playwright test --project=e2e --headed",
+		"test:visual": "playwright test --project=visual-desktop --project=visual-mobile -g \"@visual|@visualMobile\"",
+		"pretest:visual": "playwright test --project=visual-desktop --project=visual-mobile -g \"@visual|@visualMobile\" --update-snapshots",
+		"test:all": "npm run test && npm run test:e2e && npm run test:visual"
 	},
 	"dependencies": {
 		"@nivo/bar": "^0.89.1",
@@ -30,7 +37,9 @@
 		"usehooks-ts": "^3.1.1"
 	},
 	"devDependencies": {
+		"@axe-core/playwright": "^4.10.2",
 		"@eslint/js": "^9.22.0",
+		"@playwright/test": "^1.55.0",
 		"@testing-library/dom": "^10.4.0",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/react": "^16.3.0",

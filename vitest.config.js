@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { configDefaults } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -18,6 +19,20 @@ export default defineConfig({
 		coverage: {
 			reporter: ['text', 'html'],
 		},
+		include: [
+			'src/**/*.{test,spec}.{js,jsx,ts,tsx}',
+			'tests/unit/**/*.{test,spec}.{js,jsx,ts,tsx}',
+		],
+		exclude: [
+			...configDefaults.exclude,
+			'tests/e2e/**',
+			'tests/visual/**',
+			'**/*.e2e.*',
+			'**/*.visual.*',
+			'playwright-report/**',
+			'test-results/**',
+		],
+		watchExclude: ['tests/e2e/**', 'playwright-report/**'],
 	},
 	resolve: {
 		alias: {

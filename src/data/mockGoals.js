@@ -8,7 +8,7 @@ const mockGoals = [
     "frequency": [
       "daily"
     ],
-    "createdAt": "2025-03-27T00:00:00",
+    "createdAt": "2025-08-27T00:00:00",
     "completedTask": false,
     "streakCount": 10,
     "isArchived": false,
@@ -265,7 +265,7 @@ const mockGoals = [
       "wednesday",
       "friday"
     ],
-    "createdAt": "2025-03-27T00:00:00",
+    "createdAt": "2025-08-27T00:00:00",
     "completedTask": false,
     "streakCount": 7,
     "isArchived": false,
@@ -387,7 +387,7 @@ const mockGoals = [
       "thursday",
       "friday"
     ],
-    "createdAt": "2025-03-27T00:00:00",
+    "createdAt": "2025-08-27T00:00:00",
     "completedTask": false,
     "streakCount": 3,
     "isArchived": false,
@@ -542,7 +542,7 @@ const mockGoals = [
       "thursday",
       "friday"
     ],
-    "createdAt": "2025-03-27T00:00:00",
+    "createdAt": "2025-08-27T00:00:00",
     "completedTask": false,
     "streakCount": 18,
     "isArchived": false,
@@ -729,7 +729,7 @@ const mockGoals = [
     "frequency": [
       "daily"
     ],
-    "createdAt": "2025-03-27T00:00:00",
+    "createdAt": "2025-08-27T00:00:00",
     "completedTask": false,
     "streakCount": 8,
     "isArchived": false,
@@ -988,7 +988,7 @@ const mockGoals = [
       "thursday",
       "friday"
     ],
-    "createdAt": "2025-03-27T00:00:00",
+    "createdAt": "2025-08-27T00:00:00",
     "completedTask": false,
     "streakCount": 14,
     "isArchived": false,
@@ -1175,7 +1175,7 @@ const mockGoals = [
     "frequency": [
       "daily"
     ],
-    "createdAt": "2025-03-27T00:00:00",
+    "createdAt": "2025-08-27T00:00:00",
     "completedTask": false,
     "streakCount": 13,
     "isArchived": false,

@@ -51,7 +51,7 @@ const Header = () => {
 		<header className='sticky top-0 left-0 mb-4 bg-white dark:bg-gray-900 shadow-md z-50'>
 			<AnimatePresence mode='wait' initial={false}>
 				<motion.div
-					data-testid='mobile-menu'
+					data-testid='main-menu'
 					key={i18n.language}
 					variants={fadeDownVariant}
 					initial='initial'

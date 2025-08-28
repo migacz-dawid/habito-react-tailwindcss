@@ -103,6 +103,7 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 				</label>
 				<input
 					id='goal-title'
+					data-testid='add-goal-title'
 					type='text'
 					value={title}
 					onChange={e => setTitle(e.target.value)}
@@ -184,6 +185,7 @@ const GoalForm = ({ mode = 'add', initialValues = {}, onSubmit, onCancel }) => {
 
 			<div className='flex flex-row justify-between gap-2'>
 				<ActionButton
+					data-testid='add-goal-save'
 					text={t('save_goal')}
 					icon={<AiFillSave />}
 					variant='primary'

@@ -79,7 +79,7 @@ const GoalCard = ({
 			transition={{ duration: 0.25, ease: 'easeInOut' }}
 			className={clsx(cardBaseClasses, goal.isArchived ? archivedCardClasses : activeCardClasses)}>
 			<div className='topCard'>
-				<h2 className={clsx(titleBaseClasses, isCompletedToday ? titleCompletedClasses : titleActiveClasses)}>
+				<h2 className={clsx(titleBaseClasses, isCompletedToday ? titleCompletedClasses : titleActiveClasses)} data-testid="goal-card">
 					{goal.title}
 				</h2>
 
