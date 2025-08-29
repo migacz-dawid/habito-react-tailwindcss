@@ -70,6 +70,7 @@ const Header = () => {
 					</motion.div>
 
 					<motion.nav
+						data-testid='desktop-nav'
 						variants={fadeDownDelayedVariant}
 						initial='initial'
 						animate='animate'
