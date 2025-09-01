@@ -25,14 +25,9 @@ Projekt ma trzy warstwy testów: **unit (Vitest)**, **E2E (Playwright)** oraz **
 5. [Biblioteki i narzędzia](#libraries)
 6. [Funkcjonalności](#functionalities)
 7. [Instalacja](#instalation)
-<<<<<<< HEAD
 8. [Testy](#tests)
 9. [Deployment (GitHub Pages)](#deployment) 
 10. [Użytkowanie](#use)  
-=======
-8. [Deployment (GitHub Pages)](#deployment) 
-9. [Użytkowanie](#use)  
->>>>>>> 05dadbef92499fab4205dc868ea7c3ee577b9111
 
 ---
 ## <a name="description"></a>🔍 Opis projektu
