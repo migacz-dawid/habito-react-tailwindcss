@@ -106,21 +106,29 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 
 ---
 ## <a name="tests"></a>🧪 Testy
-1. # testy jednostkowe (Vitest)  
+1. Testy jednostkowe (Vitest)  
    ```bash
    npm run test
   
-2. # testy E2E (Playwright) 
+2. Testy E2E (Playwright) 
    ```bash
    npm run test:e2e
 
-3. # testy wizualne (Playwright) – desktop + mobile  
+3.  Testy E2E (Playwright)  – Tryb UI czyli interaktywne uruchamianie/debug 
+   ```bash
+   npm run test:e2e:ui
+
+4.  Testy E2E (Playwright)  – Tryb headed czyli przeglądarka z oknem
+   ```bash
+   npm run test:e2e:headed
+  
+5. Testy wizualne (Playwright) – desktop + mobile 
    ```bash
    npm run test:visual
   
-4. Uruchom w trybie deweloperskim: 
+6. Pełny zestaw testów
    ```bash
-   npm run dev
+   npm run test:all
 
 ---
 
