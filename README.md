@@ -106,17 +106,17 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 
 ---
 ## <a name="tests"></a>🧪 Testy
-1. Sklonuj repozytorium  
+1. # testy jednostkowe (Vitest)  
    ```bash
-   git clone https://github.com/migacz-dawid/habito-react-tailwindcss
+   npm run test
   
-2. Przejdź do katalogu projektu: 
+2. # testy E2E (Playwright) 
    ```bash
-   cd habito-react-tailwindcss
+   npm run test:e2e
 
-3. Zainstaluj zależności:  
+3. # testy wizualne (Playwright) – desktop + mobile  
    ```bash
-   npm install
+   npm run test:visual
   
 4. Uruchom w trybie deweloperskim: 
    ```bash
