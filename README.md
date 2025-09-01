@@ -113,6 +113,26 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 2. Testy E2E (Playwright) 
    ```bash
    npm run test:e2e
+  
+3. Testy E2E (Playwright)  – Tryb UI czyli interaktywne uruchamianie/debug
+   ```bash
+   npm run test:e2e:ui
+  
+4. Testy E2E (Playwright)  – Tryb headed czyli przeglądarka z oknem
+   ```bash
+   npm run test:e2e:headed
+  
+5. Testy wizualne (Playwright) – desktop + mobile 
+   ```bash
+   npm run test:visual
+  
+6. Pełny zestaw testów
+   ```bash
+   npm run test:all
+  
+2. Testy E2E (Playwright) 
+   ```bash
+   npm run test:e2e
 
 3.  Testy E2E (Playwright)  – Tryb UI czyli interaktywne uruchamianie/debug 
    ```bash
