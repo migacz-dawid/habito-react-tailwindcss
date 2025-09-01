@@ -4,7 +4,7 @@ test.beforeEach(async ({ context }) => {
 	await context.addInitScript(() => {
 		localStorage.setItem('i18nextLng', 'en')
 		localStorage.setItem('goals', '[]')
-		// Poniedziałek 2025-08-25
+		// Monday 2025-08-25
 		const fixed = new Date('2025-08-25T12:00:00+02:00').valueOf()
 		const _Date = Date
 

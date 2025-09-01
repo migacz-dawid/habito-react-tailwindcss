@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { useTranslation, Trans } from 'react-i18next'
 import { useLocalStorage } from 'usehooks-ts'
+import useSimulatedDate from '../hooks/useSimulatedDate'
 import ThemeToggleButton from '../components/ui/ThemeToggleButton'
 import LanguageSwitchButton from '../components/ui/LanguageSwitchButton'
 import ActionButton from '../components/ui/ActionButton'
@@ -25,6 +26,7 @@ const Settings = () => {
 
 	// Use useLocalStorage hook
 	const [goals, setGoals] = useLocalStorage('goals', [])
+	const [, setSimulatedDate] = useSimulatedDate()
 
 	const [showInstallButton, setShowInstallButton] = useState(true)
 	const [deferredPrompt, setDeferredPrompt] = useState(null)
@@ -81,7 +83,7 @@ const Settings = () => {
 		reader.readAsText(file)
 	}
 	const handleLoadDemo = () => {
-		loadDemoGoals(setGoals)
+		loadDemoGoals(setGoals, setSimulatedDate)
 	}
 
 	return (
@@ -134,6 +136,8 @@ const Settings = () => {
 							messageKey: t('confirm_reset'),
 							onConfirm: () => {
 								setGoals([])
+								const today = new Date().toISOString().split('T')[0]
+								setSimulatedDate(today)
 								setInfoModal({ isOpen: true, messageKey: t('info_reset_done') })
 							},
 						})

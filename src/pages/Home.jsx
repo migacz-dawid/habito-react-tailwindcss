@@ -64,7 +64,7 @@ const Home = () => {
 	}, [])
 
 	const handleLoadDemo = () => {
-		loadDemoGoals(setGoals)
+		loadDemoGoals(setGoals, setSimulatedDate)
 	}
 
 	const toggleCompleted = id => {

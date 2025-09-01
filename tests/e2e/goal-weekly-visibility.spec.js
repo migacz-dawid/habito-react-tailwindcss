@@ -22,7 +22,7 @@ test.beforeEach(async ({ context }) => {
 test('monday-only goal is not visible on Wednesday', async ({ page }) => {
   await page.goto('/#/add');
   await page.getByTestId('add-goal-title').fill('Gym Monday');
-  await page.getByTestId('day-monday').click(); // weekly, nie daily
+  await page.getByTestId('day-monday').click(); // weekly, not daily
 
   // --- robust click na "Save" ---
   const submit = page.locator('form button[type="submit"]').first();
