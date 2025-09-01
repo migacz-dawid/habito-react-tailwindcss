@@ -25,9 +25,14 @@ Projekt ma trzy warstwy testów: **unit (Vitest)**, **E2E (Playwright)** oraz **
 5. [Biblioteki i narzędzia](#libraries)
 6. [Funkcjonalności](#functionalities)
 7. [Instalacja](#instalation)
+<<<<<<< HEAD
 8. [Testy](#tests)
 9. [Deployment (GitHub Pages)](#deployment) 
 10. [Użytkowanie](#use)  
+=======
+8. [Deployment (GitHub Pages)](#deployment) 
+9. [Użytkowanie](#use)  
+>>>>>>> 05dadbef92499fab4205dc868ea7c3ee577b9111
 
 ---
 ## <a name="description"></a>🔍 Opis projektu
@@ -105,6 +110,7 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
    npm run dev
 
 ---
+<<<<<<< HEAD
 ## <a name="tests"></a>🧪 Testy
 1. Sklonuj repozytorium  
    ```bash
@@ -123,6 +129,8 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
    npm run dev
 
 ---
+=======
+>>>>>>> 05dadbef92499fab4205dc868ea7c3ee577b9111
 
 ## <a name="deployment"></a>📦 Deployment (GitHub Pages)
 Po uruchomieniu `npm run build` pliki produkcyjne tworzone są bezpośrednio w katalogu `docs/`, który GitHub Pages traktuje jako źródło demo.
@@ -138,4 +146,8 @@ Po uruchomieniu `npm run build` pliki produkcyjne tworzone są bezpośrednio w k
 2. Przełącz Dark/Light mode w prawym górnym rogu.  
 3. Wybierz dni i kategorie dla swoich nawyków.  
 4. Po zakończeniu dnia wróć i odhacz postępy.  
+<<<<<<< HEAD
 5. Przełącz język za pomocą przycisku PL/EN.  
+=======
+5. Przełącz język za pomocą przycisku PL/EN.  
+>>>>>>> 05dadbef92499fab4205dc868ea7c3ee577b9111
