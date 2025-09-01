@@ -129,8 +129,6 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
 6. Pełny zestaw testów
    ```bash
    npm run test:all
-  
-
 
 ---
 
