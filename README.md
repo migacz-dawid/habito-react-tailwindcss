@@ -138,8 +138,4 @@ Po uruchomieniu `npm run build` pliki produkcyjne tworzone są bezpośrednio w k
 2. Przełącz Dark/Light mode w prawym górnym rogu.  
 3. Wybierz dni i kategorie dla swoich nawyków.  
 4. Po zakończeniu dnia wróć i odhacz postępy.  
-<<<<<<< HEAD
 5. Przełącz język za pomocą przycisku PL/EN.  
-=======
-5. Przełącz język za pomocą przycisku PL/EN.  
->>>>>>> 05dadbef92499fab4205dc868ea7c3ee577b9111
