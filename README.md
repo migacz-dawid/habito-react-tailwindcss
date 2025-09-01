@@ -105,7 +105,6 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
    npm run dev
 
 ---
-<<<<<<< HEAD
 ## <a name="tests"></a>🧪 Testy
 1. Sklonuj repozytorium  
    ```bash
@@ -124,8 +123,6 @@ Intuicyjny wygląd, przyjazny interfejs, ciemny tryb dla nocnych sów – wszyst
    npm run dev
 
 ---
-=======
->>>>>>> 05dadbef92499fab4205dc868ea7c3ee577b9111
 
 ## <a name="deployment"></a>📦 Deployment (GitHub Pages)
 Po uruchomieniu `npm run build` pliki produkcyjne tworzone są bezpośrednio w katalogu `docs/`, który GitHub Pages traktuje jako źródło demo.
